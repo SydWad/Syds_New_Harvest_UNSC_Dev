@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character specifiertags="true" SpeciesName="Hank2" Tags="" SpeciesTranslationOverride="" DisplayName="" Group="human" Humanoid="True" HasInfo="False" CanInteract="True" CanClimb="True" ForceSlowClimbing="False" Husk="False" HuskedSpecies="" NonHuskedSpecies="" UseHuskAppendage="True" NeedsAir="False" NeedsWater="False" UseHumanAI="False" IsMachine="False" CanSpeak="True" ShowHealthBar="True" UseBossHealthBar="False" Noise="0" Visibility="0" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="True" EatingSpeed="10" UsePathFinding="True" PathFinderPriority="1" HideInSonar="False" HideInThermalGoggles="False" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False" AITurretPriority="1" AISlowTurretPriority="1" DespawnContainer="">
+  <ragdolls folder="%ModDir%/Characters/Hank2/Ragdolls" />
+  <animations folder="%ModDir%/Characters/Hank2/Animations" />
+  <health Vitality="1" DoesBleed="False" CrushDepth="Infinity" UseHealthWindow="True" BleedingReduction="0" BurnReduction="0.075" ConstantHealthRegeneration="0" HealthRegenerationWhenEating="0" StunImmunity="False" PoisonImmunity="False" PoisonVulnerability="1" EmpVulnerability="0" ApplyMovementPenalties="True" DieFromBeheading="True" AllowSeveringLegs="False" ApplyAfflictionColors="True" Immunities=""></health>
+  <Inventory Slots="LeftHand,RightHand,Card" AccessibleWhenAlive="True">
+    <Item identifier="idcard" equip="true" />
+  </Inventory>
+  <ai combatstrength="10" sight="1000" hearing="1000" fleehealththreshold="0" aggressiveboarding="False" aggressiongreed="10" aggressionhurt="200" attackwhenprovoked="False" avoidgunfire="True" enforceaggressivebehaviorformissions="False" targetouterwalls="False" randomattack="False" avoidtime="3" minfleetime="20">
+    <target Tag="Hank2" State="Idle" Priority="1000" ReactDistance="100" AttackDistance="0" Timer="0" IgnoreContained="True" IgnoreInside="True" IgnoreOutside="True" IgnoreTargetInside="True" IgnoreTargetOutside="True" IgnoreIfNotInSameSub="True" IgnoreIncapacitated="True" Threshold="0" ThresholdMin="-1" ThresholdMax="-1" PerceptionDistanceMultiplier="1" MaxPerceptionDistance="-1" Offset="0,0" AttackPattern="Straight" PrioritizeSubCenter="False" SweepDistance="0" SweepStrength="10" SweepSpeed="1" CircleStartDistance="5000" IgnoreTargetSize="False" CircleRotationSpeed="1" DynamicCircleRotationSpeed="False" CircleRandomRotationFactor="0" CircleStrikeDistanceMultiplier="5" CircleMaxRandomOffset="0" />
+    <target tag="human" state="Protect" threshold="-1" priority="100" reactdistance="75" attackdistance="0" timer="0" />
+  </ai>
+  <StatusEffect Type="Always" Targettype="this">
+    <Sound file="%ModDir%/Characters/Hank2/Blow Me Away.ogg" volume="0.2" range="300" loop="true" dontmuffle="true" />
+  </StatusEffect>
+  <StatusEffect Type="OnDeath" Targettype="this">
+    <RemoveCharacter />
+  </StatusEffect>
+</Character>

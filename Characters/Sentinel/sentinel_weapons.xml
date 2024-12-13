@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Continuous Beam Laser fired, used by Sentinel drones-->
+  <Item name="Sentinel Beam" identifier="nh_sentinelbeam" category="Equipment" Tags="smallitem" description="" Scale="0.32" impactsoundtag="impact_metal_light">
+    <InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Characters/Sentinel/sentinel_weapons.png" sourcerect="1,1,132,82" depth="0.55" origin="0.5,0.5" />
+    <Body radius="50" width="180" density="40" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-85,-25" handle2="-10,-27" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="0.0" barrelpos="0,0" spread="0" unskilledspread="10" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="%ModDir%/Items/Weapons/crosshairs.png" sourcerect="1024,512,256,256" />
+      <ParticleEmitter particle="sentinelbeamflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+      </LightComponent>
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      </StatusEffect>
+      <!--"Use" contained magazine to spawn projectiles.-->
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <StatusEffect type="OnActive" targettype="This" Voltage="1.0" setvalue="true" />
+      <RequiredSkill identifier="mechanical" level="50" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
+      <Containable identifiers="nh_sentinelcharge" />
+    </ItemContainer>
+    <aitarget sightrange="20000" soundrange="500" fadeouttime="3" />
+  </Item>
+  <!-- Add Charge for Sentinels to make automatic to appear like firing a straight beam! -->
+  <Item name="Sentinel Charge" identifier="nh_sentinelcharge" linkable="true" tags="smallitem" impactsoundtag="impact_magazine_ma5c">
+    <Price locationtype="Military" buyprice="25" />
+    <Price locationtype="City" buyprice="45" />
+    <Deconstruct time="10">
+      <Item identifier="steel" copycondition="true" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Items/Weapons/weapons.png" depth="0.6" sourcerect="842,78,34,46" origin="0.5,0.5" />
+    <Body width="34" height="46" density="50" />
+    <ItemContainer hideitems="true" capacity="32" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="nh_sentinellaser">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
+      <Containable identifiers="nh_sentinellaser" />
+      <!-- Magazine has infinite ammo -->
+      <StatusEffect type="OnUse" target="This" condition="-0.0" disabledeltatime="true">
+        <SpawnItem identifiers="nh_sentinellaser" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!-- Sentinel laserbeam needs to look like constant effect -->
+  <Item name="SentinelLaser" identifier="nh_sentinellaser" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_plasmahit" hideinmenus="true" scale="0.32">
+    <PreferredContainer primary="nh_sentinelcharge" minamount="1" maxamount="1" spawnprobability="1" />
+    <Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="786,350,43,10" depth="0.6" origin="0.5,0.5" />
+    <Body width="85" height="18" density="5" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="0">
+      <Attack structuredamage="0" targetforce="5" itemdamage="5" severlimbsprobability="0.05">
+        <Affliction identifier="burn" strength="10" />
+        <Affliction identifier="stun" strength="0.8" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="sentinelbeamlaser" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+</Items>

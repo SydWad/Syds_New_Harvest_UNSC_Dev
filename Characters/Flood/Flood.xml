@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Flood" humanoid="False" displayname="Infection Form" group="flood" hasinfo="False" husk="False" usehuskappendage="False" needsair="False" needswater="False" canspeak="False" noise="100" visibility="100" blooddecal="floodblood" bleedparticleair="blooddrop" bleedparticlewater="waterblood" eatingspeed="10" pathfinderpriority="1" hideinsonar="False" sonardisruption="0" speciestranslationoverride="">
+  <ragdolls folder="%ModDir%/Characters/Flood/Ragdolls/" />
+  <animations folder="%ModDir%/Characters/Flood/Animations/" />
+  <health vitality="10" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" />
+  <ai combatstrength="100" sight="1" hearing="1" aggressionhurt="100" aggressiongreed="1000" fleehealththreshold="0" attackwhenprovoked="False" avoidgunfire="False" aggressiveboarding="True" enforceaggressivebehaviorformissions="True" targetinnerwalls="False" randomattack="True" targetouterwalls="True">
+    <target tag="sonar" state="Aggressive" priority="100" reactdistance="0" attackdistance="0" />
+    <target tag="dead" state="Eat" priority="100" reactdistance="0" attackdistance="0" />
+    <target tag="weaker" state="Attack" priority="100" reactdistance="0" attackdistance="0" />
+    <target tag="human" state="Attack" priority="100" reactdistance="0" attackdistance="0" />
+    <target tag="stronger" state="Attack" priority="100" reactdistance="0" attackdistance="0" />
+    <latchonto attachtowalls="true" attachtosub="true" mindeattachspeed="3.0" maxdeattachspeed="10.0" damageondetach="1000" detachstun="5.0" attachlimb="Head" localattachpos="40,10" attachlimbrotation="100" />
+    <SwarmBehavior mindistfromclosest="300" maxdistfromcenter="1000" cohesion="0.5" />
+  </ai>
+  <sound file="%ModDir%/Sounds/characters/flood/floodinfector_die1.ogg" state="Die" range="1000" volume="1" gender="None" />
+  <sound file="%ModDir%/Sounds/characters/flood/floodinfector_die2.ogg" state="Die" range="1000" volume="1" gender="None" />
+  <sound file="%ModDir%/Sounds/characters/flood/floodinfector_die3.ogg" state="Die" range="1000" volume="1" gender="None" />
+  <sound file="%ModDir%/Sounds/characters/flood/flood_feed1.ogg" state="Idle" range="1000" volume="0.75" gender="None" />
+  <sound file="%ModDir%/Sounds/characters/flood/flood_feed2.ogg" state="Idle" range="1000" volume="0.75" gender="None" />
+  <sound file="%ModDir%/Sounds/characters/flood/flood_feed3.ogg" state="Idle" range="1000" volume="0.75" gender="None" />
+  <StatusEffect type="OnDeath" target="This" targetlimb="Head">
+    <Remove />
+  </StatusEffect>
+  <StatusEffect type="OnDeath" target="This" targetlimb="Tail">
+    <Remove />
+  </StatusEffect>
+</Character>

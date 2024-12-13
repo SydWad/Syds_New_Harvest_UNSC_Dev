@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" steamworkshopid="3096140652" corepackage="false" modversion="1.0.1" gameversion="1.6.19.1" installtime="1733220399" expectedhash="AC5B5A0DDCE2FCEA2125682808065B79">
+  <ItemAssembly file="%ModDir%/NH_Dev_Items.xml" />
+  <Afflictions file="%ModDir%/Afflictions/Afflictions.xml" />
+  <Afflictions file="%ModDir%/Afflictions/Afflictions_Wearable.xml" />
+  <Afflictions file="%ModDir%/Afflictions/Afflictions_Speed.xml" />
+  <Jobs file="%ModDir%/Jobs.xml" />
+  <Sounds file="%ModDir%/Sounds/sounds.xml" />
+  <Item file="%ModDir%/Items/Materials/med_materials.xml" />
+  <Item file="%ModDir%/Items/Materials/raw_materials.xml" />
+  <Item file="%ModDir%/Items/Misc/miscgear.xml" />
+  <Item file="%ModDir%/Items/Door/doors.xml" />
+  <Item file="%ModDir%/Items/Weapons/weapons_unsc.xml" />
+  <Item file="%ModDir%/Items/Jobgear/npc_items.xml" />
+  <Item file="%ModDir%/Items/Weapons/ammo_unsc.xml" />
+  <Item file="%ModDir%/Items/Weapons/weapons_misc.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Armor/unsc_combatgear.xml" />
+  <Text file="%ModDir%/Texts/English/English.xml" />
+  <Text file="%ModDir%/Texts/English/EnglishFactions.xml" />
+  <Text file="%ModDir%/Texts/Русский/Русский.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Security/security_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Pilot/pilot_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Physician/physician_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/ODST/odst_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Mechanic/mechanic_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Engineer/engineer_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Crewman/crewman_gear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Captain/captain_gear.xml" />
+  <Particles file="%ModDir%/Particles/ParticlePrefabs.xml" />
+  <Decals file="%ModDir%/Particles/DecalPrefabs.xml" />
+  <Item file="%ModDir%/Items/Command/command.xml" />
+  <ContainerTag file="%ModDir%/ContainerTags.xml" />
+  <Character file="%ModDir%/Afflictions/DummyCharacters/HumanDontSpawnThis.xml" />
+  <Character file="%ModDir%/Afflictions/DummyCharacters/HumanHuskDontSpawnThis.xml" />
+  <Character file="%ModDir%/Afflictions/DummyCharacters/HumanFloodDontSpawnThis.xml" />
+  <Character file="%ModDir%/Afflictions/DummyCharacters/HumanAirInfectedDontSpawnThis.xml" />
+  <Character file="%ModDir%/Characters/HumanBlank2/HumanBlank.xml" />
+  <Character file="%ModDir%/Characters/Hank2/Hank2.xml" />
+  <Factions file="%ModDir%/Map/factions.xml" />
+  <Submarine file="%ModDir%/A NH Combat Ground.sub" />
+  <Submarine file="%ModDir%/A NH testing Ground.sub" />
+  <UIStyle file="%ModDir%/UI/style.xml" />
+  <UIStyle file="%ModDir%/UI/Server/PlayStyles.xml" />
+  <NPCSets file="%ModDir%/NPCPrefabs/OutpostNpcs.xml" />
+</contentpackage>

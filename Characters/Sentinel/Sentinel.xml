@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Sentinel" humanoid="False" displayname="" group="forerunner" hasinfo="False" husk="False" usehuskappendage="False" needsair="False" needswater="False" canspeak="False" noise="100" visibility="100" blooddecal="" bleedparticleair="" bleedparticlewater="" eatingspeed="1" pathfinderpriority="1" hideinsonar="False" sonardisruption="0">
+  <ragdolls folder="%ModDir%/Characters/sentinel/Ragdolls/" />
+  <animations folder="%ModDir%/Characters/sentinel/Animations/" />
+  <health vitality="60" doesbleed="False" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="10" burnreduction="10" constanthealthregeneration="0" healthregenerationwheneating="0" />
+  <ai combatstrength="1" sight="2.0000002" hearing="1" aggressionhurt="100" aggressiongreed="0" fleehealththreshold="0" attackwhenprovoked="True" avoidgunfire="True" aggressiveboarding="True" enforceaggressivebehaviorformissions="False" targetouterwalls="True" randomattack="False">
+    <target tag="Flood" state="Attack" priority="10" reactdistance="300" attackdistance="0" />
+    <target tag="Floodhuman" state="Attack" priority="10" reactdistance="300" attackdistance="300" />
+    <target tag="Floodcarrier" state="Attack" priority="10" reactdistance="300" attackdistance="300" />
+  </ai>
+  <inventory slots="Any, Any" accessiblewhenalive="True" commonness="1">
+    <item identifier="nh_sentinelbeam" />
+  </inventory>
+  <damageemitter particle="spark" anglemin="0" anglemax="0" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="1" particlespersecond="1" particleamount="1" highqualitycollisiondetection="True" copyentityangle="True" />
+</Character>

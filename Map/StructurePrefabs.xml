@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs>
+  <!-- SUBMARINE WALLS aka *SHELLS" START -->
+  <hullA name="UNSC Horizontal Hull" identifier="NH_000deg" description="" body="true" castshadow="false" health="200" bodyheight="74" resizehorizontal="true">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="100,0,510,72" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Short Hull-Ramp" identifier="NH_045deg_short1" description="" body="true" castshadow="false" health="200" bodywidth="172" bodyheight="52" bodyoffset="21,-20" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="99,99,138,139" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Short Hull-Ramp" identifier="NH_045deg_short2" description="" body="true" castshadow="false" health="200" bodywidth="200" bodyheight="52" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="241,99,213,139" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Short Hull-Ramp" identifier="NH_045deg_short3" description="" body="true" castshadow="false" health="200" bodywidth="95" bodyheight="52" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="459,100,64,139" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Short Hull-Ramp" identifier="NH_045deg_short4" description="" body="true" castshadow="false" health="200" bodywidth="75" bodyheight="52" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="406,243,128,51" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 15 Degree Hull-Ramp" identifier="NH_015deg_short1" description="" body="true" castshadow="false" health="200" bodywidth="97" bodyheight="89" bodyrotation="-15">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="100,243,96,99" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Long Hull-Ramp" identifier="NH_045deg_long1" description="" body="true" castshadow="false" health="200" bodywidth="515" bodyheight="75" bodyoffset="-3,1" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="100,346,407,412" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Long Hull-Ramp" identifier="NH_045deg_long2" description="" body="true" castshadow="false" health="200" bodywidth="485" bodyheight="75" bodyoffset="0,12" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="511,346,392,412" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 45 Degree Long Hull-Ramp" identifier="NH_045deg_long3" description="" body="true" castshadow="false" health="200" bodywidth="512" bodyheight="75" bodyrotation="-45">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="907,346,392,412" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC Vertical Hull" identifier="NH_090deg" description="" body="true" castshadow="false" health="200" bodywidth="74" resizevertical="true">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="0,1,72,510" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 90 Degree Hull-Cap" identifier="NH_090deg_cap1" description="Submarine wall" body="true" castshadow="false" health="200" bodywidth="99" bodyheight="99" noaitarget="true">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="200,243,99,99" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC 90 Degree Hull-Cap" identifier="NH_090deg_cap2" description="Submarine wall" body="true" castshadow="false" health="200" bodywidth="99" bodyheight="99" noaitarget="true">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="303,243,99,99" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC Horizontal Backboard" identifier="NH_000deg_board" description="Submarine deco" castshadow="false" resizehorizontal="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="100,77,510,19" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullA name="UNSC Vertical Backboard" identifier="NH_090deg_board" description="Submarine deco" castshadow="false" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="77,1,19,510" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullA>
+  <hullB name="Covenant Horizontal Hull" identifier="NH_c_000deg" description="" body="true" castshadow="false" health="200" bodyheight="72" resizehorizontal="true">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1,1952,510,72" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullB>
+  <hullB name="Covenant Vertical Hull" identifier="NH_c_090deg" description="" body="true" castshadow="false" health="200" bodywidth="72" resizevertical="true">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1975,912,72,510" depth="0.1" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" depth="0.85" />
+  </hullB>
+  <!-- INTERIOR WALLS FF -->
+  <structure name="UNSC Horizontal Interior Wall" identifier="NH_x_wall" description="" width="540" height="48" resizehorizontal="true" body="true" castshadow="true" health="75">
+    <sprite texture="%ModDir%/Map/Structures.png" depth="0.06" sourcerect="1459,2000,538,48" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" sourcerect="1458,2000,540,48" color="60,60,60,255" depth="0.9" origin="0.5,0.5" />
+  </structure>
+  <structure name="UNSC Vertical Interior Wall" identifier="NH_y_wall" description="" width="48" height="540" resizevertical="true" body="true" castshadow="true" health="75">
+    <sprite texture="%ModDir%/Map/Structures.png" depth="0.06" sourcerect="1924,912,48,538" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" sourcerect="1924,911,48,540" color="60,60,60,255" depth="0.9" origin="0.5,0.5" />
+  </structure>
+  <structure name="Covenant Interior Wall" identifier="NH_cx_wall" description="" width="540" height="48" resizehorizontal="true" body="true" castshadow="true" health="75">
+    <sprite texture="%ModDir%/Map/Structures.png" depth="0.06" sourcerect="917,2000,538,48" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" sourcerect="916,2000,540,48" color="60,60,60,255" depth="0.9" origin="0.5,0.5" />
+  </structure>
+  <structure name="Covenant Interior Wall" identifier="NH_cy_wall" description="" width="48" height="540" resizevertical="true" body="true" castshadow="true" health="75">
+    <sprite texture="%ModDir%/Map/Structures.png" depth="0.06" sourcerect="2000,1509,48,538" origin="0.5,0.5" />
+    <backgroundsprite texture="%ModDir%/Map/Structures.png" sourcerect="2000,1508,48,540" color="60,60,60,255" depth="0.9" origin="0.5,0.5" />
+  </structure>
+  <!-- BACK WALLS START -->
+  <bwall01 name="Backwall Bridge A" identifier="NHwall01" scale="1" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" color="200,180,170,255" sourcerect="1,762,340,254" depth="0.98" />
+  </bwall01>
+  <bwall02 name="Backwall Bridge B" identifier="NHwall02" scale="0.82" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="345,762,455,254" color="255,238,230,255" depth="0.98" />
+  </bwall02>
+  <bwall03 name="Backwall Bridge C" identifier="NHwall03" scale="0.82" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="804,762,91,254" depth="0.98" />
+  </bwall03>
+  <bwall04 name="Backwall Bridge D" identifier="NHwall04" scale="0.82" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="899,762,635,254" depth="0.98" />
+  </bwall04>
+  <bwall05 name="Backwall Bridge E" identifier="NHwall05" scale="0.82" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1538,762,163,254" depth="0.98" />
+  </bwall05>
+  <bwall06 name="Backwall Bridge F" identifier="NHwall06" scale="0.82" allowattachitems="true" width="64" height="64" resizehorizontal="true" resizevertical="true" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1349,1020,413,258" depth="0.98" />
+  </bwall06>
+  <!-- DECORATIONS START -->
+  <decodoor name="Door" identifier="decodoor" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" scale="0.81" sourcerect="1028,1019,318,260" depth="0.85" origin="0.5,0.5" />
+  </decodoor>
+  <vendingmachine1 name="Vending Machine" identifier="NHdeco_01" scale="0.3" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="0,1019,256,511" depth="0.85" origin="0.5,0.5" />
+  </vendingmachine1>
+  <vendingmachine2 name="Vending Machine" identifier="NHdeco_02" scale="0.3" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="256,1019,256,511" depth="0.85" origin="0.5,0.5" />
+  </vendingmachine2>
+  <Tackboard name="Bulletin Board" identifier="NHdeco_03" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="0,1532,511,256" depth="0.85" origin="0.5,0.5" />
+  </Tackboard>
+  <Cautionsign name="Caution Sign" identifier="NHdeco_04" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="514,1533,126,62" depth="0.85" origin="0.5,0.5" />
+  </Cautionsign>
+  <UNSCSymbol name="UNSC Symbol" identifier="NHdeco_05" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="513,1598,128,190" depth="0.85" origin="0.5,0.5" />
+  </UNSCSymbol>
+  <poster01 name="Propaganda Poster" identifier="NHdeco_06" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="901,1532,198,256" depth="0.85" origin="0.5,0.5" />
+  </poster01>
+  <poster02 name="Propaganda Poster" identifier="NHdeco_07" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1101,1532,198,256" depth="0.85" origin="0.5,0.5" />
+  </poster02>
+  <poster03 name="Propaganda Poster" identifier="NHdeco_08" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1301,1532,198,256" depth="0.85" origin="0.5,0.5" />
+  </poster03>
+  <labelarrow01 name="Airlock Label" identifier="NHdeco_09" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="0,1790,256,159" depth="0.85" origin="0.5,0.5" />
+  </labelarrow01>
+  <labelarrow02 name="Bridge Label" identifier="NHdeco_10" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="258,1790,256,159" depth="0.85" origin="0.5,0.5" />
+  </labelarrow02>
+  <labelarrow03 name="Cryo Label" identifier="NHdeco_11" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="516,1790,256,159" depth="0.85" origin="0.5,0.5" />
+  </labelarrow03>
+  <labelarrow04 name="Lifepods Label" identifier="NHdeco_12" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="774,1790,256,159" depth="0.85" origin="0.5,0.5" />
+  </labelarrow04>
+  <labelarrow05 name="Maintenance Label" identifier="NHdeco_13" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1032,1790,256,159" depth="0.85" origin="0.5,0.5" />
+  </labelarrow05>
+  <labelarrow06 name="Stairs Label" identifier="NHdeco_14" scale="0.5" category="Decorative">
+    <sprite texture="%ModDir%/Map/Structures.png" sourcerect="1290,1790,256,159" depth="0.85" origin="0.5,0.5" />
+  </labelarrow06>
+</prefabs>

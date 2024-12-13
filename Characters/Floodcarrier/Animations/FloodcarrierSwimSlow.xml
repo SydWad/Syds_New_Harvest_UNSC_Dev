@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FloodcarrierSwimSlow animationtype="SwimSlow" usesinemovement="True" flip="True" flipcooldown="1" flipdelay="0.5" mirror="True" mirrorlerp="True" waveamplitude="15" wavelength="10" rotatetowardsmovement="True" torsotorque="25" headtorque="25" tailtorque="50" tailtorquemultiplier="1" foottorque="25" footangles="5: 1.012291,8: 1.0821041" tailangle="NaN" steertorque="45" movementspeed="1.25" cyclespeed="1.6000001" headangle="0" torsoangle="-50" />

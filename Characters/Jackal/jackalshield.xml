@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- Deflect Projectiles completely, change color based on damage, possibly change to frontfacing mode when aiming, recharge after 10 seconds down, turn off when not being held
+	<Item name="Jackal Shield" identifier="nh_jackalshield" category="Equipment" tags="weapon" impactsoundtag="impact_metal_light">
+    <Price locationtype="Military" buyprice="200" />
+    <Price locationtype="City" buyprice="225" />
+    <Price locationtype="Outpost" buyprice="225" />
+    <Deconstruct time="10">
+		<Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+		<RequiredSkill identifier="mechanical" level="50" />
+		<RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,320,64,64" />
+    <animatedsprite texture="%ModDir%/Characters/Jackal/jackalshield.png" sourcerect="0,0,768,384" columns="6" rows="3" origin="0.5,0.5" depth="0.55" />
+    <sprite texture="jackshield.png" sourcerect="0,0," />
+	<Body width="40" height="145" density="30" />
+		<Holdable slots="RightHand+LeftHand" aimpos="60,-30" holdpos="45,-30" handle1="-10,0" handle2="10,0" controlpose="true" blocksplayers="true" msg="ItemMsgPickUpSelect">
+			<StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.6" setvalue="true" />
+			<LightComponent LightColor="0.0,0.7,1.0,1.0" Flicker="0.05" range="50" powerconsumption="10" IsOn="true">
+				<LightTexture texture="%ModDir%/Lights/EnergySword.png" origin="0.5, 0.5" size="1.0,1.0" />
+			</LightComponent>
+		</Holdable>
+	</Item>
+	-->
+</Items>

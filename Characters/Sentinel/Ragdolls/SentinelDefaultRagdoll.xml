@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Ragdoll type="sentinel" texture="Mods\New Harvest\Characters\sentinel\Sentinel.png" canentersubmarine="True" canwalk="True" spritesheetorientation="0" limbscale="0.3" jointscale="0.3" texturescale="1" colliderheightfromfloor="405" impacttolerance="50" draggable="True" mainlimb="Torso">
+  <collider radius="42" width="1" name="Main Collider" height="1" />
+  <limb id="0" name="sentinelbody" type="Torso" height="215" width="435" notes="" spriteorientation="0" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="35" radius="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="0" mouthpos="0,0" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" healthindex="0" friction="0.3" restitution="0.05">
+    <sprite texture="" sourcerect="1,1,510,254" origin="0.5,0.5" depth="0" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" />
+    <damagemodifier damagesound="" damagemultiplier="1" probabilitymultiplier="1" armorsector="0,360" deflectprojectiles="True" afflictionidentifiers="" afflictiontypes="" />
+  </limb>
+</Ragdoll>

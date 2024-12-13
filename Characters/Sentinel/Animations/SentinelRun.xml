@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SentinelRun animationtype="Run" flip="True" flipcooldown="0" flipdelay="0.2" headmoveforce="10" torsomoveforce="10" footmoveforce="8" headtorque="50" torsotorque="50" tailtorque="50" foottorque="25" legtorque="0" colliderstandangle="0" footangles="" tailangle="NaN" stepsize="1,1" headposition="0" torsoposition="4.44926" stepliftheadmultiplier="1" stepliftamount="0" stepliftoffset="0" stepliftfrequency="0" backwardsmovementmultiplier="0.75" movementspeed="10" cyclespeed="1" headangle="NaN" torsoangle="-15" />

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs prefabtype="thalamus">
+  <structure name="Vertical Biomass Wall" identifier="nh_biomasswall_vertical" tags="thalamus,thalamuswall_vertical" width="96" height="50" resizevertical="true" body="true" castshadow="true" health="50" category="Thalamus">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" depth="0.1" sourcerect="992,64,96,513" origin="0.5,0.5" />
+  </structure>
+  <structure name="Vertical Infested Wall" identifier="nh_infestedwall_vertical" tags="thalamus,thalamuswall_vertical" width="96" height="50" resizevertical="true" body="true" castshadow="true" health="50" category="Thalamus">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" depth="0.1" sourcerect="1108,64,96,513" origin="0.5,0.5" />
+  </structure>
+  <structure name="Horizontal Biomass Wall" identifier="nh_biomasswall_horizontal" tags="thalamus,thalamuswall_horizontal" width="50" height="96" resizehorizontal="true" body="true" castshadow="true" health="50" category="Thalamus">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" depth="0.1" sourcerect="96,264,512,96" origin="0.5,0.5" />
+  </structure>
+  <structure name="Horizontal Infested Wall" identifier="nh_infestedwall_horizontal" tags="thalamus,thalamuswall_horizontal" width="50" height="96" resizehorizontal="true" body="true" castshadow="true" health="50" category="Thalamus">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" depth="0.1" sourcerect="96,356,512,96" origin="0.5,0.5" />
+  </structure>
+  <structure name="Proto-Gravemind Backwall" identifier="nh_protogravemind_background" tags="thalamus,brainroombackground" allowattachitems="true" category="Thalamus" resizehorizontal="true" resizevertical="true" width="100" height="100">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" sourcerect="1516,769,531,254" depth="0.895" origin="0.5,0.5" />
+  </structure>
+  <structure name="Biomass Background" identifier="nh_biomass_background_1" tags="thalamus,brainroombackground" allowattachitems="true" category="Thalamus" resizehorizontal="true" resizevertical="true" width="100" height="100">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" sourcerect="1793,1,254,254" depth="0.895" origin="0.5,0.5" />
+  </structure>
+  <structure name="Biomass Background" identifier="nh_biomass_background_2" tags="thalamus,brainroombackground" allowattachitems="true" category="Thalamus" resizehorizontal="true" resizevertical="true" width="100" height="100">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" sourcerect="1793,257,254,254" depth="0.895" origin="0.5,0.5" />
+  </structure>
+  <structure name="Biomass Background" identifier="nh_biomass_background_3" tags="thalamus,brainroombackground" allowattachitems="true" category="Thalamus" resizehorizontal="true" resizevertical="true" width="100" height="100">
+    <sprite texture="%ModDir%/Map/Flood/floodships.png" sourcerect="1793,513,254,254" depth="0.895" origin="0.5,0.5" />
+  </structure>
+</prefabs>

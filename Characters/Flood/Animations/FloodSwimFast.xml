@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FloodSwimFast animationtype="SwimFast" usesinemovement="True" flip="True" flipcooldown="1" flipdelay="0.5" mirror="True" mirrorlerp="True" waveamplitude="7.5" wavelength="45" rotatetowardsmovement="True" torsotorque="25" headtorque="25" tailtorque="50" tailtorquemultiplier="1" foottorque="25" footangles="" tailangle="157" steertorque="25" movementspeed="6.6171393" cyclespeed="1" headangle="NaN" torsoangle="64" />

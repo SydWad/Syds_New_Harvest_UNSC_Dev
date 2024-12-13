@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Spartan Armor" description="" identifier="nh_spartanarmor" category="Diving,Equipment" tags="mediumitem,diving,deepdiving,divinggear_wearableindoors,provocative" scale="0.5" fireproof="true" impactsoundtag="impact_metal_heavy">
+    <Price locationtype="Military" buyprice="100000" />
+    <Deconstruct time="30">
+      <Item identifier="aluminium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="titanium" />
+      <Item identifier="rubber" />
+    </Deconstruct>
+    <Sprite name="Spartan Armor" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="256,128,128,64" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,256,128,128" />
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect">
+      <!-- Fake modifier to show effects to player -->
+      <damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_torso.png" sourcerect="0,28,123,163" origin="0.6,0.7" scale="0.7" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="1,0,88,90" origin="0.6,0.5" scale="0.7" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_torso.png" sourcerect="200,4,41,81" origin="0.5,0.5" scale="0.75" limb="RightForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_torso.png" sourcerect="200,127,41,79" origin="0.5,0.5" scale="0.75" limb="LeftForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_torso.png" sourcerect="132,7,52,98" origin="0.5,0.5" scale="0.75" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_torso.png" sourcerect="132,130,53,96" origin="0.5,0.5" scale="0.75" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="13,209,33,38" origin="0.5,0.5" scale="0.75" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="58,208,33,38" origin="0.5,0.5" scale="0.75" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="99,0,71,144" origin="0.5,0.5" scale="0.75" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="179,0,71,144" origin="0.5,0.5" scale="0.75" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="100,148,76,108" origin="0.45,0.5" scale="0.75" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="180,148,76,108" origin="0.45,0.5" scale="0.75" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="10,92,71,100" origin="0.4,0.5" scale="0.65" rotation="90" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_legs.png" sourcerect="10,92,71,100" origin="0.4,0.5" scale="0.65" rotation="90" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" damagemultiplier="0.35" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="explosiondamage" damagemultiplier="0.7" armorsector="0.0,360.0" damagesound="LimbArmor" />
+      <damagemodifier afflictiontypes="bleeding" damagemultiplier="0.5" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="burn" damagemultiplier="0.7" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="stun" damagemultiplier="0.15" armorsector="0.0,360.0" damagesound="LimbArmor" deflectprojectiles="true" />
+      <!--<damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding,alieninfection" damagemultiplier="0.15" />
+		<damagemodifier afflictionidentifiers="radiationsickness" damagemultiplier="0.2" armorsector="0.0,365.0" />-->
+      <!--<StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="0.15" PropulsionSpeedMultiplier="1.4" setvalue="true" disabledeltatime="true" />-->
+      <StatusEffect type="OnWearing" targettype="Character" PropulsionSpeedMultiplier="1.4" setvalue="true" disabledeltatime="true" />
+      <StatValue stattype="WalkingSpeed" value="-0.85" />
+      <StatusEffect type="OnWearing" targettype="Character" PressureProtection="5750.0" setvalue="true" disabledeltatime="true">
+        <Conditional HasStatusTag="pressure_helmet" />
+      </StatusEffect>
+      <!--<damagemodifier armorsector="180.0,360.0" afflictiontypes="cold" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+		<damagemodifier armorsector="0.0,360.0" afflictiontypes="floodinfection" damagemultiplier="0.05" />-->
+      <!--<StatusEffect tags="medical" type="OnWearing" targettype="Character">
+			<Affliction identifier="spartanneurallink" strength="1" />
+			<Affliction identifier="haste" strength="300" />
+		</StatusEffect>-->
+    </Wearable>
+    <Holdable slots="LeftHand+RightHand" holdpos="10,-40" holdangle="45" msg="ItemMsgPickUpSelect" />
+    <!-- Seporate wearable component so the player doesnt get armor protection on their head -->
+    <Wearable slots="OuterClothes">
+      <sprite texture="%ModDir%/UI/Container_Icons.png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Head" hideotherwearables="false">
+        <LightComponent range="350.0" lightcolor="255,255,225,150" powerconsumption="1" IsOn="true">
+          <StatusEffect type="OnWearing" targettype="This,Character" Voltage="10.0" setvalue="true" comparison="Or">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <!-- I dont know how to reliably turn off the light when the suit is taken off -->
+          <!-- <StatusEffect type="OnNotContained" targettype="This" IsOn="false" TargetItemComponent="LightComponent" delay="0.5" disabledeltatime="true"/> -->
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.04,0.51" />
+        </LightComponent>
+      </sprite>
+      <sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" hidelimb="true" inherittexturescale="true" depth="1.0" canbehiddenbyotherwearables="false" />
+    </Wearable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="TopLeft" absoluteoffset="0,0" style="ItemUI" />
+      <TickBox text="Armor Flashlight" State="true">
+        <StatusEffect type="OnUse" targettype="This" IsOn="true" TargetItemComponent="LightComponent" />
+        <StatusEffect type="OnSecondaryUse" targettype="This" IsOn="false" TargetItemComponent="LightComponent" />
+      </TickBox>
+    </CustomInterface>
+    <ItemContainer capacity="0" hideitems="true" containedstateindicatorslot="0" containedstateindicatorstyle="battery">
+      <SlotIcon slotindex="0" texture="%ModDir%/UI/Container_Icons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="%ModDir%/UI/Container_Icons.png" sourcerect="256,0,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="2" texture="%ModDir%/UI/Container_Icons.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+      <!-- When power source is contained -->
+      <SubContainer capacity="1" maxstacksize="1">
+        <!-- 60 minutes of use -->
+        <Containable identifiers="nh_fusion_power">
+          <StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" condition="47.2222222222" />
+        </Containable>
+        <!-- 1 minute of use -->
+        <Containable identifiers="alienpowercell">
+          <StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" condition="48.3333333333" />
+        </Containable>
+        <Containable identifiers="nh_fusion_power,mobilebattery,alienpowercell">
+          <StatusEffect type="OnWearing" targettype="Contained" targetitemslot="0" condition="-50" />
+          <StatusEffect type="OnWearing" targettype="This,Character" voltage="1" SpeedMultiplier="1.85" setvalue="true" />
+          <StatValue stattype="WalkingSpeed" value="0.85" />
+          <StatusEffect type="OnWearing" targettype="This,Character" setvalue="true" comparison="and">
+            <Conditional nh_energy_shields="lt 1" />
+            <RequiredItem identifier="nh_shieldmodule" type="Contained" />
+            <Affliction identifier="nh_energy_shields" amount="1" />
+          </StatusEffect>
+          <!-- Play recharge sound on loop when shields increasing -->
+          <StatusEffect type="OnWearing" targettype="This,Character" comparison="and">
+            <Conditional IsLocalPlayer="True" />
+            <Conditional nh_energy_shields="gt 2" />
+            <Conditional nh_energy_shield_delay_short="lteq 0" />
+            <Conditional nh_energy_shield_delay_long="lteq 0" />
+            <RequiredItem identifier="nh_shieldmodule" type="Contained" />
+            <Sound file="%ModDir%/Afflictions/spartan_shield_recharge.ogg" volume="1.25" loop="true" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+      <!-- When medicine is contained -->
+      <SubContainer capacity="1" maxstacksize="1" autoinject="true">
+        <Containable identifiers="medical" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <!-- When shield module is contained -->
+        <Containable identifiers="nh_shieldmodule" />
+        <!-- When extra armor is contained -->
+        <Containable identifiers="nh_armormodule">
+          <!-- Hate it but i had to make three in order to have three levels of protection for different types -->
+          <StatusEffect type="OnWearing" targettype="Character" setvalue="true">
+            <Affliction identifier="nh_extra_armor_1" amount="100" />
+            <Affliction identifier="nh_extra_armor_2" amount="100" />
+            <Affliction identifier="nh_extra_armor_3" amount="100" />
+          </StatusEffect>
+        </Containable>
+      </SubContainer>
+    </ItemContainer>
+  </Item>
+  <Item name="Spartan Helmet Mk.V" description="" variantof="nh_dummy_spartanhelmet" identifier="nh_spartanhelmet_1" hideinmenus="false">
+    <PreferredContainer primary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+    <Price locationtype="Military" buyprice="150" sold="false" />
+    <Deconstruct time="10">
+      <Item identifier="steel" amount="5" />
+    </Deconstruct>
+    <Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="12,23,108,79" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+    <Wearable slots="Head" msg="ItemMsgEquipSelect">
+      <!-- Fake modifier to show effects to player -->
+      <damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+      <damagemodifier afflictionidentifiers="nh_fake_fov" damagemultiplier="0.5" armorsector="0.0,0.0" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="0,0,128,128" origin="0.52,0.5" scale="1.5" limb="Head" hidelimb="true" hideotherwearables="true" inherittexturescale="true"></sprite>
+      <StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="true" LowPassMultiplier="0.1" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.6" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.2" damagesound="LimbArmor" />
+    </Wearable>
+    <Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Spartan Helmet EVA" description="" variantof="nh_dummy_spartanhelmet" identifier="nh_spartanhelmet_2" hideinmenus="false">
+    <PreferredContainer primary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+    <Price locationtype="Military" buyprice="150" sold="true" />
+    <Deconstruct time="10">
+      <Item identifier="steel" amount="5" />
+    </Deconstruct>
+    <Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="147,24,88,80" depth="0.6" origin="0.5,0.5" />
+    <Body radius="40" density="35" friction="0.8" restitution="0.01" />
+    <Wearable slots="Head" msg="ItemMsgEquipSelect">
+      <!-- Fake modifier to show effects to player -->
+      <damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="128,0,128,128" origin="0.55,0.5" scale="1.5" limb="Head" hidelimb="true" hideotherwearables="true" inherittexturescale="true"></sprite>
+      <StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="false" LowPassMultiplier="0.1" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.6" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.2" damagesound="LimbArmor" />
+    </Wearable>
+    <Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Damaged EVA Helmet" description="" variantof="nh_dummy_spartanhelmet" identifier="nh_spartanhelmet_2_emile" hideinmenus="true">
+    <PreferredContainer primary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+    <Price locationtype="Military" buyprice="150" sold="false" />
+    <Deconstruct time="10">
+      <Item identifier="steel" amount="5" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="147,24,88,80" />
+    <Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="275,24,88,80" depth="0.6" origin="0.5,0.5" />
+    <Body radius="40" density="35" friction="0.8" restitution="0.01" />
+    <Wearable slots="Head" msg="ItemMsgEquipSelect">
+      <!-- Fake modifier to show effects to player -->
+      <damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
+      <sprite texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="256,0,128,128" origin="0.55,0.5" scale="1.5" limb="Head" hidelimb="true" hideotherwearables="true" inherittexturescale="true"></sprite>
+      <StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="false" LowPassMultiplier="0.1" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.5" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="bleeding" damagemultiplier="0.6" damagesound="LimbArmor" />
+      <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.2" damagesound="LimbArmor" />
+    </Wearable>
+    <Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <!-- Base helmet that all the others are variants of, has the most basic of info on it (i made it because i found out if you make a variant with a "Wearable" comp and add another "Wearable" comp then the DamageModifiers stack) -->
+  <Item name="སDummy Spartan Helmet" description="" identifier="nh_dummy_spartanhelmet" category="Equipment" tags="smallitem,diving,deepdiving,divinggear_wearableindoors,provocative,divingmask" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.37" impactsoundtag="impact_soft" hideinmenus="true">
+    <Sprite name="Spartan Helmet" texture="%ModDir%/Items/Jobgear/Spartan/spartan_helmet.png" sourcerect="12,23,108,79" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="35" friction="0.8" restitution="0.01" />
+    <!-- Just in case people somehow get one i dont want it to be trapped on the ship forever -->
+    <Deconstruct time="0.1">
+      <Item identifier="nh_spartanhelmet_1" />
+    </Deconstruct>
+    <Holdable slots="LeftHand" holdpos="25,0" holdangle="-35" msg="ItemMsgPickUpSelect" />
+    <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <StatusEffect type="OnActive" targettype="This">
+        <Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+        <sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+      </StatusEffect>
+    </WifiComponent>
+    <ItemContainer capacity="1" hideitems="true" containedstateindicatorstyle="tank">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <Containable items="oxygensource,weldingtoolfuel" excludeditems="oxygenitetank" />
+      <Containable items="oxygensource">
+        <StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="1000.0" />
+        <StatusEffect type="OnWearing" targettype="Contained" Condition="-0.3" comparison="And">
+          <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" targettype="Contained">
+          <Conditional condition="lt 5.0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
+        </StatusEffect>
+      </Containable>
+      <Containable items="oxygenitetank">
+        <StatusEffect type="OnWearing" targettype="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
+          <Conditional IsDead="false" />
+          <Conditional DecreasedOxygenConsumption="lt 99" />
+          <Conditional NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+      <Containable items="weldingfueltank">
+        <StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" comparison="And">
+          <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
+          <Conditional IsDead="false" />
+          <Conditional DecreasedOxygenConsumption="lt 99" />
+          <Conditional NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+      <Containable items="incendiumfueltank">
+        <StatusEffect type="OnWearing" targettype="Contained" Condition="-0.5" comparison="And">
+          <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
+          <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" targettype="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
+          <Affliction identifier="burn" amount="20.0" />
+          <Conditional IsDead="false" />
+          <Conditional DecreasedOxygenConsumption="lt 99" />
+          <Conditional NeedsAir="true" />
+        </StatusEffect>
+      </Containable>
+      <StatusEffect type="OnWearing" targettype="Contained" playsoundonrequireditemfailure="true">
+        <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+        <Conditional condition="lte 0.0" />
+        <Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true" />
+      </StatusEffect>
+    </ItemContainer>
+  </Item>
+  <!-- A copy that can spawn inside dev containers -->
+  <Item name="སSpartan Armor" identifier="nh_dev_spartanarmor" variantof="nh_spartanarmor" descriptionidentifier="nh_spartanarmor" tags="smallitem,divinggear_wearableindoors" hideinmenus="true">
+    <PreferredContainer primary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
+    <Price locationtype="Military" buyprice="100000" sold="false" />
+  </Item>
+</Items>

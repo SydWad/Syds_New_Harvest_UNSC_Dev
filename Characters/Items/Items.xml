@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Items" humanoid="false">
+  <ragdolls folder="%ModDir%/Characters/Items/Ragdolls/" />
+  <animations folder="%ModDir%/Characters/Items/Animations/" />
+  <health />
+  <ai />
+</Character>

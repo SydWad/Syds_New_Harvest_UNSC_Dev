@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<prefabs>
+  <floodblood color="1.0, 1.0, 1.0, 1.0" lifetime="60" fadeouttime="20">
+    <sprite texture="%ModDir%/Particles/SpeciesBlood.png" sourcerect="0,128,128,128" />
+    <sprite texture="%ModDir%/Particles/SpeciesBlood.png" sourcerect="128,128,64,64" />
+    <sprite texture="%ModDir%/Particles/SpeciesBlood.png" sourcerect="192,128,64,64" />
+    <sprite texture="%ModDir%/Particles/SpeciesBlood.png" sourcerect="128,192,64,64" />
+    <sprite texture="%ModDir%/Particles/SpeciesBlood.png" sourcerect="192,192,64,64" />
+  </floodblood>
+</prefabs>

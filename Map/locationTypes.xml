@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<locationtypes>
+  <mainmenu_keyes identifier="mainmenu_keyes" commonnessperzone="0: 0, 0: 0, 0: 0" useinmainmenu="true">
+    <Symbol texture="Content/Map/MapIconAtlas.png" sourcerect="768,512,256,256" color="198,252,222,255" />
+    <Portrait texture="%ModDir%/Map/LocationPortraits/Menu.png" premultiplyalpha="false" />
+  </mainmenu_keyes>
+</locationtypes>

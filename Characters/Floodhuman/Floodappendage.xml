@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<huskappendage>
+  <limb name="Floodappendage 1" id="13" height="10" width="15" ignorecollisions="True" flip="True">
+    <sprite texture="%ModDir%/Characters/Floodhuman/Floodappendage.png" sourcerect="0,203,57,53" depth="0.5" origin="0.5,0.5" />
+    <VitalityMultiplier type="damage" multiplier="50" />
+  </limb>
+  <limb name="Huskappendage 2" id="14" height="10" width="15" ignorecollisions="True" flip="True">
+    <sprite texture="%ModDir%/Characters/Floodhuman/Floodappendage.png" sourcerect="0,162,53,28" depth="0.4" origin="0.5,0.5" />
+  </limb>
+  <limb name="Huskappendage 3" id="15" height="10" width="15" ignorecollisions="True" flip="True">
+    <deformablesprite texture="%ModDir%/Characters/Floodhuman/Floodappendage.png" sourcerect="0,0,58,110" origin="0.5,0.5" depth="0.0" subdivisions="5,5" color="255,255,255,255" deadcolor="0,0,0,0" deadcolortime="0.1">
+      <spritedeformation type="noise" resolution="5,5" frequency="0.01" amplitude="0.2" changespeed="1" blendmode="Add" sync="-1" typename="noise" strength="1" maxrotation="90" usemovementsine="False" stopwhenhostisdead="True" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="noise" resolution="5,5" frequency="0.01" amplitude="0.25" changespeed="2" blendmode="Add" sync="-1" typename="noise" strength="1" maxrotation="90" usemovementsine="False" stopwhenhostisdead="True" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="inflate" resolution="5,5" frequency="20" scale="0.04" blendmode="Add" usemovementsine="False" stopwhenhostisdead="True" sync="-1" typename="inflate" strength="1" maxrotation="90" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="custom" resolution="5,5" frequency="0" amplitude="1" blendmode="Multiply" row0="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row1="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row2="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row3="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row4="0,0 0,0 0.25,0.25 0.5,0.5 1,1" sync="-1" typename="custom" strength="1" maxrotation="90" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="bendjoint" resolution="5,5" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="45" strength="5" onlyinwater="False" />
+    </deformablesprite>
+  </limb>
+  <limb name="Huskappendage 4" id="16" height="50" width="15" attackpriority="2" flip="True" pullpos="0,25" type="LeftHand" healthindex="0" steerforce="0" stepoffset="0,0" radius="0" density="10" refjoint="-1" ignorecollisions="True" notes="" friction="0.3" restitution="0.05">
+    <deformablesprite texture="%ModDir%/Characters/Floodhuman/Floodappendage.png" sourcerect="58,0,70,180" origin="0.5,0.5" depth="0.0" subdivisions="5,5" color="255,255,255,255" deadcolor="0,0,0,0" deadcolortime="0.1">
+      <spritedeformation type="noise" resolution="5,5" frequency="0.01" amplitude="0.2" changespeed="1" blendmode="Add" sync="-1" typename="noise" strength="1" maxrotation="90" usemovementsine="False" stopwhenhostisdead="True" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="noise" resolution="5,5" frequency="0.01" amplitude="0.25" changespeed="2" blendmode="Add" sync="-1" typename="noise" strength="1" maxrotation="90" usemovementsine="False" stopwhenhostisdead="True" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="inflate" resolution="5,5" frequency="20" scale="0.04" blendmode="Add" usemovementsine="False" stopwhenhostisdead="True" sync="-1" typename="inflate" strength="1" maxrotation="90" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="custom" resolution="5,5" frequency="0" amplitude="1" blendmode="Multiply" row0="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row1="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row2="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row3="0,0 0,0 0.25,0.25 0.5,0.5 1,1" row4="0,0 0,0 0.25,0.25 0.5,0.5 1,1" sync="-1" typename="custom" strength="1" maxrotation="90" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" onlyinwater="False" />
+      <spritedeformation type="bendjoint" resolution="5,5" multiplier="1.0" sync="-1" typename="bendjoint" blendmode="Add" usemovementsine="False" stopwhenhostisdead="False" sineoffset="0" maxrotation="45" strength="5" onlyinwater="False" />
+    </deformablesprite>
+    <attack range="70" damagerange="50" duration="0.1" targetforce="0" structuresoundtype="StructureBlunt" force="6" applyforceonlimbs="1" torque="0" context="Any" targettype="Character" hitdetectiontype="Distance" structuredamage="0" itemdamage="0" stun="0" onlyhumans="False" applyforcesonlyonce="False" targetimpulse="10" targetimpulseworld="0,0" targetforceworld="0,0" severlimbsprobability="0" stickchance="0" priority="0" afterattack="FollowThrough" cooldown="3" secondarycooldown="0" cooldownrandomfactor="0.25">
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <ReduceAffliction identifier="damage" strength="5" />
+      </StatusEffect>
+      <Affliction identifier="lacerations" strength="2" probability="0.7" />
+      <Affliction identifier="floodinfection" strength="20" probability="0.5" />
+      <Affliction identifier="stun" strength="0.5" />
+    </attack>
+  </limb>
+  <!-- Flood appendages -->
+  <joint name="Head to Floodappendage" limb1="1" limb2="13" limb1anchor="7.5,10" limb2anchor="0,2" upperlimit="0" lowerlimit="-10" canbesevered="False" limitenabled="True" />
+  <joint name="Floodform to Tenticals" limb1="13" limb2="14" limb1anchor="5.5,4" limb2anchor="-9,2" upperlimit="110" lowerlimit="90" stiffness="1" canbesevered="False" limitenabled="True" />
+  <joint name="Shoulder to Floodappendage" limb1="3" limb2="16" limb1anchor="0,-2.5" limb2anchor="0,0" upperlimit="0" lowerlimit="0" stiffness="1" canbesevered="False" limitenabled="True" />
+  <joint name="Arm to Floodappendage" limb1="4" limb2="15" limb1anchor="0,0" limb2anchor="0,0" upperlimit="0" lowerlimit="0" stiffness="1" canbesevered="False" limitenabled="True" />
+</huskappendage>

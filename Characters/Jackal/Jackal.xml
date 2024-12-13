@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Character speciesname="Jackal" humanoid="True" group="human" hasinfo="False" husk="False" usehuskappendage="False" needsair="True" needswater="False" canspeak="True" noise="100" visibility="100" blooddecal="blood" bleedparticleair="blooddrop" bleedparticlewater="waterblood" eatingspeed="10" pathfinderpriority="1" hideinsonar="False">
+  <ragdolls folder="%ModDir%/Characters/Jackal/Ragdolls/" />
+  <animations folder="%ModDir%/Characters/Jackal/Animations/" />
+  <name firstname="%ModDir%/Characters/Jackal/firstnames.txt" lastname="%ModDir%/Characters/Jackal/lastnames.txt" />
+  <portraitbackground>
+    <sprite name="Human Portrait Background" texture="Content/Characters/Human/mugshotCircle.png" origin="0,0.05" />
+  </portraitbackground>
+  <ragdolls folder="default" />
+  <animations folder="default" />
+  <health usehealthwindow="true" vitality="100" crushdepth="-30000.0" doesbleed="true">
+    <MedUISilhouette texture="%ModDir%/UI/Health/MedUI_Silhouette_Jackal.png" columns="8" rows="2" sourcerect="0,0,1008,748" />
+    <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024" />
+    <Limb name="Head">
+      <Sprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54" />
+      <Highlightsprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="1,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="2.0" />
+    </Limb>
+    <Limb name="Torso">
+      <Sprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134" />
+      <Highlightsprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="631,515,126,374" />
+      <VitalityMultiplier type="bleeding" multiplier="2.0" />
+    </Limb>
+    <Limb name="LeftArm">
+      <Sprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
+      <Highlightsprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="379,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+    <Limb name="RightArm">
+      <Sprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
+      <Highlightsprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="127,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+    <Limb name="LeftLeg">
+      <Sprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
+      <Highlightsprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="505,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+    <Limb name="RightLeg">
+      <Sprite texture="%ModDir%/UI/Health/MedUIJackal.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
+      <Highlightsprite texture="%ModDir%//UI/Health/MedUIJackal.png" sourcerect="253,515,126,374" />
+      <VitalityMultiplier type="damage" multiplier="0.5" />
+    </Limb>
+  </health>
+  <inventory arrowslot="9" slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any" />
+  <Heads>
+    <Head id="1" sheetindex="0,0" />
+    <Head id="2" sheetindex="1,0" />
+    <Head id="3" sheetindex="2,0" />
+    <Head id="4" sheetindex="3,0" />
+    <Head id="5" sheetindex="1,0" />
+  </Heads>
+  <ai combatstrength="1" sight="1" hearing="1" aggressionhurt="100" aggressiongreed="50" fleehealththreshold="50" attackwhenprovoked="True" avoidgunfire="True" aggressiveboarding="False" enforceaggressivebehaviorformissions="True" targetinnerwalls="False" randomattack="False">
+    <target tag="crawler" state="Aggressive" priority="100" reactdistance="0" attackdistance="0" />
+    <target tag="dead" state="Avoid" priority="20" reactdistance="0" attackdistance="0" />
+    <target tag="flood" state="Flee" priority="10" reactdistance="0" attackdistance="0" />
+  </ai>
+</Character>
