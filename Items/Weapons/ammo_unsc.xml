@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <!-- //////////////////////////////////////////////////////////////////
+<!-- //////////////////////////////////////////////////////////////////
 //// Grenades /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////// -->
   <!--HAVOK Tactical Nuclear Device -->
@@ -389,6 +389,7 @@
   <!-- //////////////////////////////////////////////////////////////////
 //// Magazines ////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////// -->
+
   <!-- //////////////////////////////////////////////////////////////////
 //// Heavy Weapons ////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////// -->
@@ -724,7 +725,7 @@
     </Projectile>
   </Item>
   <!-- Rocket 102mm HE/FRAG -->
-  <Item name="" identifier="nh_spnkr_pod_he" scale="0.35" health="2" MaxStackSize="10" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="mediumitem,largeammo,spnkr_ammo,spnkr_magazine" impactsoundtag="impact_metal_heavy">
+  <Item name="" identifier="nh_spnkr_pod_he" scale="0.35" health="2" MaxStackSize="10" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="mediumitem,largeammo,spnkr_ammo,spnkr_magazine" impactsoundtag="impact_metal_heavy" >
     <PreferredContainer secondary="nh_102mm_consumer" amount="1" spawnprobability="1" CampaignOnly="true" />
     <PreferredContainer primary="nh_102mm_consumer" spawnprobability="1" NotCampaign="true" />
     <PreferredContainer primary="nh_dev_ammo" amount="10" spawnprobability="1" NotCampaign="true" />
@@ -794,7 +795,7 @@
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
   </Item>
   <!-- Rocket 102mm HE/FRAG -->
-  <Item name="" identifier="nh_spnkrrocket_he" nameidentifier="nh_spnkr_pod_he" descriptionidentifier="nh_spnkr_pod_he" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true">
+  <Item name="" identifier="nh_spnkrrocket_he" nameidentifier="nh_spnkr_pod_he" descriptionidentifier="nh_spnkr_pod_he" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true" ImpactTolerance="0.0">
     <!--<PreferredContainer secondary="nh_102mm_consumer" minamount="0" maxamount="2" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_102mm_consumer" amount="2" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="2" spawnprobability="1" NotCampaign="true" />
@@ -824,7 +825,7 @@
     <Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="919,336,104,23" depth="0.55" origin="1.8,0.5" />
     <Body width="160" height="10" Mass="1000" gravityScale="0" AngularDamping="1000" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-    <Projectile hitscan="false" characterusable="false" launchimpulse="35.0" sticktocharacters="false">
+    <Projectile hitscan="false" characterusable="false" launchimpulse="35.0" sticktocharacters="false" StickToCharacters="True" StickToStructures="True" StickToItems="True" StickToDeflective="True">
       <!-- Had to add the gun recoil to this, and its soo damn jank i hate it -->
       <StatusEffect type="OnUse" targettype="this" delay="0.001" stackable="false" disabledeltatime="true">
         <Explosion range="120.0" force="3" shockwave="true" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="true" camerashake="0.0" />
@@ -837,7 +838,7 @@
         <ParticleEmitter particle="FlareBubbles" particleamount="1" velocitymin="0.0" velocitymax="1.0" anglemin="0" anglemax="360" colormultiplier="215,200,200,225" scalemultiplier="2.5,2.5" />
       </StatusEffect>
       <!-- Blow up after 3 seconds -->
-      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" setvalue="true" delay="3.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" ImpactTolerance="0.1" setvalue="true" delay="3.0" disabledeltatime="true" />
       <!-- do extra damage if a direct hit -->
       <Attack structuredamage="110" penetration="0.15">
         <Affliction identifier="explosiondamage" strength="60" />
@@ -992,7 +993,7 @@
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,255,180,255" />
   </Item>
   <!-- Rocket 102mm HE/AP -->
-  <Item name="" identifier="nh_spnkrrocket_ap" nameidentifier="nh_hide_from_console" descriptionidentifier="nh_spnkr_pod_ap" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true">
+  <Item name="" identifier="nh_spnkrrocket_ap" nameidentifier="nh_hide_from_console" descriptionidentifier="nh_spnkr_pod_ap" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true" ImpactTolerance="0.0">
     <!--<PreferredContainer secondary="nh_102mm_consumer" minamount="0" maxamount="2" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_102mm_consumer" amount="2" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="2" spawnprobability="1" NotCampaign="true" />
@@ -1022,7 +1023,7 @@
     <Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="919,336,104,23" depth="0.55" origin="1.8,0.5" />
     <Body width="160" height="10" Mass="1000" gravityScale="0" AngularDamping="1000" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-    <Projectile hitscan="false" characterusable="false" launchimpulse="35.0" sticktocharacters="false" penetration="0.6">
+    <Projectile hitscan="false" characterusable="false" launchimpulse="35.0" sticktocharacters="false" penetration="0.6" StickToCharacters="True" StickToStructures="True" StickToItems="True" StickToDeflective="True" >
       <!-- Had to add the gun recoil to this, and its soo damn jank i hate it -->
       <StatusEffect type="OnUse" targettype="this" delay="0.001" stackable="false" disabledeltatime="true">
         <Explosion range="120.0" force="3" shockwave="true" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="true" camerashake="0.0" />
@@ -1035,7 +1036,7 @@
         <ParticleEmitter particle="FlareBubbles" particleamount="1" velocitymin="0.0" velocitymax="1.0" anglemin="0" anglemax="360" colormultiplier="215,200,200,225" scalemultiplier="2.5,2.5" />
       </StatusEffect>
       <!-- Blow up after 3 seconds -->
-      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" setvalue="true" delay="3.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" ImpactTolerance="0.1" setvalue="true" delay="3.0" disabledeltatime="true" />
       <!-- do extra damage if a direct hit -->
       <Attack structuredamage="500" penetration="0.6">
         <Affliction identifier="explosiondamage" strength="600" />

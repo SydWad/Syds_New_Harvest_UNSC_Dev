@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <!-- //////////////////////////////////////////////////////////////////
-//// Heavy Weapons ////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////////////////////////////////////////////
+  //// Heavy Weapons   ////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////// -->
   <!-- Halo 3 machine gun, M247H Heavy Machine Gun -->
   <Item name="" identifier="nh_aie_486h" condition="0.1" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" Tags="mediumitem,weapon,gunmediumitem,gunsmith,mountableweapon,nh_7.62x51_m_consumer" cargocontaineridentifier="nh_largecrate" fireproof="true" Scale="0.28" impactsoundtag="impact_metal_light" HideConditionInTooltip="true">
     <PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
@@ -1108,9 +1108,9 @@
     <aitarget sightrange="5000" soundrange="500" fadeouttime="3" />
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
   </Item>
-  <!-- //////////////////////////////////////////////////////////////////
-//// Medium Weapons ///////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////////////////////////////////////////////
+  //// Medium Weapons   ///////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////// -->
   <!-- Makeshift Assault Rifle -->
   <Item name="" identifier="nh_ma3" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_7.62x51_consumer" Scale="0.32" impactsoundtag="impact_metal_light">
     <PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
@@ -1688,9 +1688,9 @@
     </Quality>
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
   </Item>
-  <!-- //////////////////////////////////////////////////////////////////
-//// Lite Weapons /////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////////////////////////////////////////////
+  //// Lite Weapons   /////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////// -->
   <!-- Halo 2 SMG -->
   <Item name="" identifier="nh_m7smg" MaxStackSize="2" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="nh_smallcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_5x23_consumer" Scale="0.32" impactsoundtag="impact_weapon_m7">
     <PreferredContainer secondary="nh_dev_gun" minamount="2" maxamount="2" spawnprobability="1" NotCampaign="true" />
@@ -2118,9 +2118,9 @@
     <aitarget sightrange="10" soundrange="0" fadeouttime="0.5" />
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
   </Item>
-  <!-- //////////////////////////////////////////////////////////////////
-//// Melee Weapons ////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////////////////////////////////////////////
+  //// Melee Weapons   ////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////// -->
   <!-- I know a shotgun isnt technically a "melee weapon" but shut up nerd -->
   <!-- Halo CE Shotgun -->
   <Item name="" identifier="nh_m90" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,nh_8g_consumer" Scale="0.32" impactsoundtag="impact_weapon_m90">

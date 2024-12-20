@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" steamworkshopid="3096140652" corepackage="false" modversion="1.0.1" gameversion="1.6.19.1" installtime="1733220399" expectedhash="AC5B5A0DDCE2FCEA2125682808065B79">
+<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" steamworkshopid="3096140652" corepackage="false" modversion="1.0.1" gameversion="1.6.19.1" installtime="1733220399">
   <ItemAssembly file="%ModDir%/NH_Dev_Items.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions_Wearable.xml" />
