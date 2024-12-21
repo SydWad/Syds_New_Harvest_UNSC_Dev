@@ -795,7 +795,7 @@
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
   </Item>
   <!-- Rocket 102mm HE/FRAG -->
-  <Item name="" identifier="nh_spnkrrocket_he" nameidentifier="nh_spnkr_pod_he" descriptionidentifier="nh_spnkr_pod_he" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true" ImpactTolerance="0.0">
+  <Item name="" identifier="nh_spnkrrocket_he" nameidentifier="nh_spnkr_pod_he" descriptionidentifier="nh_spnkr_pod_he" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true" >
     <!--<PreferredContainer secondary="nh_102mm_consumer" minamount="0" maxamount="2" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_102mm_consumer" amount="2" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="2" spawnprobability="1" NotCampaign="true" />
@@ -838,7 +838,7 @@
         <ParticleEmitter particle="FlareBubbles" particleamount="1" velocitymin="0.0" velocitymax="1.0" anglemin="0" anglemax="360" colormultiplier="215,200,200,225" scalemultiplier="2.5,2.5" />
       </StatusEffect>
       <!-- Blow up after 3 seconds -->
-      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" ImpactTolerance="0.1" setvalue="true" delay="3.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" setvalue="true" delay="3.0" disabledeltatime="true" />
       <!-- do extra damage if a direct hit -->
       <Attack structuredamage="110" penetration="0.15">
         <Affliction identifier="explosiondamage" strength="60" />
@@ -993,7 +993,7 @@
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,255,180,255" />
   </Item>
   <!-- Rocket 102mm HE/AP -->
-  <Item name="" identifier="nh_spnkrrocket_ap" nameidentifier="nh_hide_from_console" descriptionidentifier="nh_spnkr_pod_ap" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true" ImpactTolerance="0.0">
+  <Item name="" identifier="nh_spnkrrocket_ap" nameidentifier="nh_hide_from_console" descriptionidentifier="nh_spnkr_pod_ap" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,spnkr_ammo,explosive,largeammo" Scale="0.32" impactsoundtag="impact_metal_light" DamagedByExplosions="False" hideinmenus="true">
     <!--<PreferredContainer secondary="nh_102mm_consumer" minamount="0" maxamount="2" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_102mm_consumer" amount="2" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="2" spawnprobability="1" NotCampaign="true" />
@@ -1036,7 +1036,7 @@
         <ParticleEmitter particle="FlareBubbles" particleamount="1" velocitymin="0.0" velocitymax="1.0" anglemin="0" anglemax="360" colormultiplier="215,200,200,225" scalemultiplier="2.5,2.5" />
       </StatusEffect>
       <!-- Blow up after 3 seconds -->
-      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" ImpactTolerance="0.1" setvalue="true" delay="3.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" targettype="this" Condition="-1.0" setvalue="true" delay="3.0" disabledeltatime="true" />
       <!-- do extra damage if a direct hit -->
       <Attack structuredamage="500" penetration="0.6">
         <Affliction identifier="explosiondamage" strength="600" />
