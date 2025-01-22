@@ -56,6 +56,7 @@
   <!-- Descriptions ‖color:gui.blue‖ ‖end‖ -->
   <Override>
     <itemmsgdetachcrowbar>[[use]] Detach (Crowbar)</itemmsgdetachcrowbar>
+    <itemmsgdetachcrowbar_grab>[[grab]] Detach (Crowbar)</itemmsgdetachcrowbar_grab>
   </Override>
   <!-- Gun Names -->
   <entityname.nh_aie_486h>M247H Heavy Machine Gun</entityname.nh_aie_486h>

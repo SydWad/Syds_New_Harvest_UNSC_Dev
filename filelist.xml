@@ -14,6 +14,7 @@
   <Item file="%ModDir%/Items/Jobgear/npc_items.xml" />
   <Item file="%ModDir%/Items/Weapons/ammo_unsc.xml" />
   <Item file="%ModDir%/Items/Weapons/weapons_misc.xml" />
+  <Item file="%ModDir%/Items/Weapons/ship_weapons.xml" />
   <Item file="%ModDir%/Items/Jobgear/Armor/unsc_combatgear.xml" />
   <Text file="%ModDir%/Texts/English/English.xml" />
   <Text file="%ModDir%/Texts/English/EnglishFactions.xml" />

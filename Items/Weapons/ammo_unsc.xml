@@ -887,14 +887,14 @@
         </Explosion>
       </StatusEffect>
       <!-- Kaboom 2 very slight delay to fix bug -->
-      <StatusEffect type="OnImpact" targettype="this" forceplaysounds="true" disabledeltatime="true" delay="0.001">
+      <StatusEffect type="OnImpact" targettype="this" forceplaysounds="true" disabledeltatime="true" delay="0.001" allowwhenbroken="True">
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_1.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_2.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_3.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Remove />
       </StatusEffect>
       <!-- Duplicate because if its onimpact broken then the slight delay can cause problems -->
-      <StatusEffect type="OnBroken" targettype="this" forceplaysounds="true">
+      <StatusEffect type="OnBroken" targettype="this" forceplaysounds="true" allowwhenbroken="True">
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_1.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_2.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_3.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
@@ -1074,14 +1074,14 @@
         </Explosion>
       </StatusEffect>
       <!-- Kaboom 2 very slight delay to fix bug -->
-      <StatusEffect type="OnImpact" targettype="this" forceplaysounds="true" disabledeltatime="true" delay="0.001">
+      <StatusEffect type="OnImpact" targettype="this" forceplaysounds="true" disabledeltatime="true" delay="0.001" allowwhenbroken="True">
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_1.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_2.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_3.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Remove />
       </StatusEffect>
       <!-- Duplicate because if its onimpact broken then the slight delay can cause problems -->
-      <StatusEffect type="OnBroken" targettype="this" forceplaysounds="true">
+      <StatusEffect type="OnBroken" targettype="this" forceplaysounds="true" allowwhenbroken="True">
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_1.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_2.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
         <Sound file="%ModDir%/Items/Weapons/Explosion/expl_far_rocket_3.ogg" range="9000" volume="1.0" selectionmode="Random" dontmuffle="true" />
@@ -2061,4 +2061,47 @@
     </Projectile>
     <Upgrade gameversion="1.6.18.1" InventoryIconColor="85,255,180,255" />
   </Item>
+  
+<Item name="Tazer Round" identifier="nh_tazer_round" health="8" category="Weapon" maxstacksize="3" interactthroughwalls="true" tags="smallitem" Scale="0.5" >
+	<!--<PreferredContainer primary="nh_dev_ammo" amount="3" spawnprobability="1" NotCampaign="true" />-->
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="307,701,12,12" depth="0.55" origin="0.5,0.5" />
+	<Body width="10" height="10" density="50" gravityScale="0.0" />
+	<Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+	<Rope sourcepullforce="0" targetpullforce="50" projectilepullforce="0" maxlength="1000" SnapWhenNotAimed="False" snaponcollision="false" spritewidth="5" tile="true" origin="0.5,0.5" lerpforces="true" snapanimduration="1.5" ReelSoundPitchSlide="1.0,1.0">
+		<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="143,730,32,24" depth="0.501" origin="0.5,0.5" />
+		<SnapSound file="Content/Sounds/UI/PopupMenu.ogg" range="500" frequencymultiplier="4.0,4.0" volume="0.8"/>
+		<ReelSound file="%ModDir%/Items/Weapons/General Sounds/Taser_Click.ogg" range="500" />
+		<StatusEffect type="OnUse" target="This" delay="0.75" checkconditionalalways="true">
+			<Conditional IsStuckToTarget="false" targetitemcomponent="Projectile" />
+			<RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" target="This" >
+			<Conditional Snapped="true" targetitemcomponent="Projectile" />
+			<RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnNotContained" target="This" condition="-1" interval="1.0" disabledeltatime="True" />
+		<StatusEffect type="OnBroken" target="This" >
+			<RemoveItem />
+		</StatusEffect>
+	</Rope>
+	<Projectile characterusable="false" launchimpulse="15" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodeflective="true" sticktodoors="true" sticktolighttargets="true">
+		<Attack structuredamage="15" itemdamage="15" targetforce="20" severlimbsprobability="0.1">
+			<!--<Affliction identifier="lacerations" strength="35" />
+			<Affliction identifier="bleeding" strength="35" />
+			<Affliction identifier="stun" strength="0.5" />-->
+		</Attack>
+		<StatusEffect type="OnImpact" target="This" projectilepullforce="100" setvalue="True" targetitemcomponent="Rope" />
+		<StatusEffect type="OnImpact" target="This" delay="0.5" disabledeltatime="True" checkconditionalalways="True" >
+			<Conditional IsStuckToTarget="false" targetitemcomponent="Projectile" />
+			<RemoveItem />
+		</StatusEffect>
+		<StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And" disabledeltatime="true">
+			<Conditional Snapped="false" />
+			<Conditional mass="lt 25" />
+			<Affliction identifier="drag" strength="100" />
+		</StatusEffect>
+	</Projectile>
+	<Upgrade gameversion="0.10.0.0" scale="0.5" />
+</Item>
+
 </Items>

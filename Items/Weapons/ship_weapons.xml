@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+
+  <Item name="" identifier="nh_drop_pod_launcher" tags="depthchargelauncher" category="Machine,Weapon" focusonselected="true" offsetonselected="700" linkable="true" allowedlinks="depthchargeammosource" scale="0.5">
+    <Sprite texture="TurretsAndDepthCharges.png" depth="0.01" sourcerect="259,1,85,149" origin="0.5,0.5" />
+    <Turret canbeselected="false" linkable="true" characterusable="false" barrelpos="42, 149" rotationlimits="90,90" powerconsumption="0.0" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+      <input name="position_in" displayname="connection.turretaimingin" />
+    </ConnectionPanel>
+  </Item>
+
+  <Item name="" identifier="nh_drop_pod_loader" tags="depthchargeammosource" category="Machine,Weapon" linkable="true" allowedlinks="depthchargelauncher" scale="0.5">
+    <Upgrade gameversion="1.6.10.0">
+      <ItemContainer canbepicked="true" pickkey="Use" />
+    </Upgrade>
+    <Sprite texture="TurretsAndDepthCharges.png" depth="0.8" sourcerect="354,2,125,188" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" autointeractwithcontained="true" autointeractwithcontainedtags="autointeractabledepthchargeammo" drawinventory="true" capacity="1" maxstacksize="1" itempos="62,-117" itemrotation="-90" 
+                   canbeselected="true" canbepicked="true" pickkey="Use" msg="ItemMsgInteractSelect">
+      <!-- the loader can't be "picked" in the sense of picking it up, the picking action is just defined to relay the Use input to the contained boarding pod -->
+      <GuiFrame relativesize="0.18,0.23" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="depthchargeammo" />
+    </ItemContainer>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <output name="contained_items" displayname="connection.ammunitionout" />
+    </ConnectionPanel>
+  </Item>
+  
+  <Item name="M8823 ARV (Drop Pod)" identifier="nh_odst_pod" tags="depthchargeammo,autointeractabledepthchargeammo" CanFlipX="False" CanFlipY="False" AllowRotatingInEditor="true" showcontentsintooltip="true" category="Weapon" sonarsize="5" scale="0.7" impactsoundtag="impact_metal_heavy" cargocontaineridentifier="" AllowDeselectWhenIdling="false" >
+    <!--<PreferredContainer primary="depthchargeloader" />
+    <Price baseprice="170" sold="false">
+      <Price storeidentifier="merchantmilitary" sold="true" multiplier="0.9" minavailable="6" />
+      <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="6" />
+    </Price>-->
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+    </Deconstruct>
+    <!--<Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" amount="2" />
+      <RequiredItem identifier="rubber" />
+      <RequiredItem identifier="fpgacircuit" />
+    </Fabricate>-->
+    <InventoryIcon texture="%ModDir%/Items/Weapons/ODST_Pod.png" sourcerect="52,9,349,192" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Weapons/ODST_Pod.png" sourcerect="0,0,429,206" depth="0.502" origin="0.4,0.5" />
+    <!--<ContainedSprite name="Boarding Pod Contained" allowedcontainertags="depthchargeammosource" texture="TurretsAndDepthCharges.png" sourcerect="489,90,119,95" depth="0.54" origin="0.5,0.5" />-->
+    <Body radius="90" width="175" density="30" angulardampening="1000" gravityscale="0.5" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,100" handle1="0,-50" handle2="0,-50" holdangle="270" aimable="false" msg="itemmsgdetachcrowbar_grab" PickingTime="3.0" pickkey="Grab">
+      <RequiredItem identifier="crowbar" type="Equipped" />
+      <StatValue stattype="MovementSpeed" value="-0.4" />
+      <StatusEffect type="OnActive" target="Character" DisableRunning="true" />
+    </Holdable><!-- maxtargetstohit="3" GoThroughLightTargets="true" --> 
+    <!--<Projectile characterusable="false" launchimpulse="20" DoesStick="True" StickToDeflective="true" LightTargetMassThreshold="1500" StickDuration="9999" >-->
+    <Projectile characterusable="false" launchimpulse="20" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodeflective="true" sticktodoors="false" sticktolighttargets="true" stickTimer="999" maxtargetstohit="3" >
+      <Attack structuredamage="9999" itemdamage="100" severlimbsprobability="5" penetration="1" targetforce="1000">
+        <Affliction identifier="blunttrauma" strength="100" />
+        <Affliction identifier="stun" strength="1" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="3" />
+        <ParticleEmitter particle="MistSmoke" particleamount="3" velocitymin="0.5" velocitymax="50" anglemin="0" anglemax="360" colormultiplier="200,200,200,255" scalemultiplier="3.5,4.5" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This" OnlyInside="true" maxtargetstohit="1" setvalue="True" />
+      <StatusEffect type="OnImpact" target="This" >
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
+      </StatusEffect>
+	  
+	  <!-- Eject door and user -->
+      <StatusEffect type="OnImpact" targettype="Contained" Targets="nh_odst_pod_door" delay="3.0" DisableDeltaTime="True" >
+		<RemoveItem />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" targettype="Contained" Targets="nh_odst_pod_door_spawner" delay="3.0" DisableDeltaTime="True" >
+		<Use />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" targettype="This" targetitemcomponent="Controller" canbeselected="false" setvalue="true" delay="3.5" DisableDeltaTime="True" />
+    </Projectile>
+    <ItemContainer capacity="2" slotsperrow="2" canbeselected="true" hideitems="true" >
+      <GuiFrame relativesize="0.15,0.23" anchor="Center" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" excludedidentifiers="mobilecontainer" />
+      <SubContainer capacity="1">
+        <SlotIcon texture="Content/UI/WeaponUI.png" sourcerect="192,960,64,64" origin="0.5,0.5" />
+        <Containable items="smallitem" excludedidentifiers="mobilecontainer" />
+      </SubContainer>
+      <!--<SubContainer capacity="1" maxstacksize="1">
+        <SlotIcon texture="Content/UI/CommandUIAtlas.png" sourcerect="639,926,128,80" origin="0.5,0.5" />
+        <Containable items="mobilecontainer" />
+      </SubContainer>-->
+    </ItemContainer>
+    <ItemContainer capacity="1" maxstacksize="1" itemrotation="90" itempos="30,0" canbeselected="false" drawinventory="false" hideitems="false" spawnwithid="nh_odst_pod_door,nh_odst_pod_door_spawner" removecontaineditemsondeconstruct="true" >
+      <Containable identifiers="nh_odst_pod_door" />
+      <SubContainer capacity="1" >
+        <Containable items="nh_odst_pod_door_spawner" itempos="30,100" />
+      </SubContainer>
+    </ItemContainer>
+    <Controller UserPos="0,-20" direction="Right" canbeselected="True" drawhudwhenequipped="false" AllowSelectingWhenSelectedByBot="false" AllowSelectingWhenSelectedByOther="false" selectkey="Use" drawuserbehind="true" forceusertostayattached="true" msg="itemmsggoinside">
+      <limbposition limb="Head" position="270,-100" />
+      <limbposition limb="Torso" position="270,-100" />
+      <limbposition limb="Waist" position="270,-100" />
+      <limbposition limb="LeftHand" position="270,-100" />
+      <limbposition limb="RightHand" position="270,-100" />
+      <limbposition limb="RightLeg" position="270,-100" />
+      <limbposition limb="LeftLeg" position="270,-100" />
+      <limbposition limb="RightFoot" position="270,-100" />
+      <limbposition limb="LeftFoot" position="270,-100" />
+      <StatusEffect type="OnNotContained" targettype="This" targetitemcomponent="ItemContainer" canbeselected="true" setvalue="true" >
+		<Conditional HasStatusTag="! user_true"/>
+	  </StatusEffect>
+      <StatusEffect type="OnActive" targettype="This" targetitemcomponent="ItemContainer" canbeselected="false" setvalue="true" tags="user_true" duration="0.5" stackable="true" DisableDeltaTime="True" />
+      <StatusEffect type="OnActive" targettype="Character" delay="0.25" stackable="true" indetectable="true" DisableFocusingOnEntities="true" invisibletimer="0.1" IgnoreMeleeWeapons="true" PressureProtection="999999.0" setvalue="true" />
+      <!-- child of the Controller = active when someone's using it -->
+      <LightComponent range="100" PowerConsumption="0" lightcolor="150,255,150,0" blinkfrequency="1" AllowInGameEditing="false" IsOn="true">
+        <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="700,55,33,30" depth="0.54" origin="-2.9,0.5" alpha="1.0" />
+        <IsActiveConditional ContainerIdentifier="! depthchargeloader"/>
+      </LightComponent>
+      <LightComponent range="100" PowerConsumption="0" lightcolor="150,255,150,0" blinkfrequency="1" AllowInGameEditing="false" IsOn="true">
+        <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="700,55,33,30" depth="0.54" origin="0.5,0.0" alpha="1.0" />
+        <IsActiveConditional ContainerIdentifier="depthchargeloader"/>
+      </LightComponent>
+    </Controller>
+  </Item>
+  
+  <Item name="Metal Door" identifier="nh_odst_pod_door" CanFlipY="False" category="Weapon" scale="0.7" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="3">
+      <Item identifier="steel" amount="2" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Items/Weapons/ODST_Pod.png" sourcerect="269,206,133,216" depth="0.501" origin="0.5,0.5" />
+    <Body width="115" height="80" density="200" angulardampening="0" gravityscale="1.25" mass="10" />
+    <Holdable slots="Any,RightHand+LeftHand" aimpos="100,0" handle1="-27,0" handle2="-27,0" msg="ItemMsgInteractSelect" >
+    </Holdable>
+    <Projectile characterusable="false" launchimpulse="20" spread="15" StickToCharacters="true" StickToDeflective="true" StickToStructures="False" StickDuration="0.01" >
+      <Attack structuredamage="15" itemdamage="15" severlimbsprobability="5" penetration="1" targetforce="500">
+        <Affliction identifier="stun" strength="1.5" />
+      </Attack>
+      <StatusEffect type="OnImpact" targettype="UseTarget" >
+		<Conditional entitytype="Character" />
+        <Explosion range="80.0" structuredamage="0" itemdamage="0" force="200.0" severlimbsprobability="1.0" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false">
+		  <Affliction identifier="blunttrauma" strength="25" />
+		  <Affliction identifier="stun" strength="2" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" targettype="UseTarget" >
+		<Conditional entitytype="! Character" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-15" anglemax="15" particleamount="35" velocitymin="-150" velocitymax="-600" scalemin="0.75" scalemax="1.5" colormultiplier="255,80,50,255" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item name="Metal Door Spawner" identifier="nh_odst_pod_door_spawner" scale="2.0" >
+    <Sprite texture="%ModDir%/Items/Weapons/ODST_Pod.png" sourcerect="230,80,10,10" depth="0.5" origin="0.5,0.5" />
+    <Body width="10" height="10" density="10" />
+    <Holdable slots="Any" >
+      <StatusEffect type="OnUse" targettype="This">
+        <SpawnItem identifier="nh_odst_pod_door" spawnposition="This" rotationtype="Collider" rotation="0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" targettype="This" delay="0.5" DisableDeltaTime="True">
+        <RemoveItem />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+</Items>
