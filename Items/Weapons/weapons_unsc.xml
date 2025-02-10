@@ -637,11 +637,9 @@
 		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="5">
 			<Reputation faction="coalition" min="75" />
-			<Reputation faction="separatists" min="60" />
 		</Price>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="5">
 			<Reputation faction="coalition" min="75" />
-			<Reputation faction="separatists" min="60" />
 		</Price>
 	</Price>
 	<Fabricate suitablefabricators="weaponfabricator" requiredtime="50" amount="1">
@@ -1124,113 +1122,6 @@
 <!-- ////////////////////////////////////////////////////////////////////
 //// Medium Weapons ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////// -->
-
-<!-- Makeshift Assault Rifle -->
-<Item name="" identifier="nh_ma3" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_7.62x51_consumer" Scale="0.32" impactsoundtag="impact_metal_light">
-	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
-	<PreferredContainer secondary="weaponholder" spawnprobability="0.1" />
-	<Price baseprice="75" sold="false" />
-	<Fabricate suitablefabricators="fabricator" requiredtime="25">
-		<RequiredSkill identifier="mechanical" level="10" />
-		<RequiredSkill identifier="weapons" level="20" />
-		<RequiredItem identifier="plastic" amount="1" />
-		<RequiredItem identifier="iron" amount="3" />
-		<RequiredItem tag="advmunition_tip" amount="2" />
-	</Fabricate>
-	<Deconstruct time="5">
-		<Item identifier="plastic" amount="1" />
-		<Item identifier="iron" amount="3" />
-	</Deconstruct>
-	<!--<Deconstruct time="18">
-		<Item identifier="plastic" OutConditionMin="0.75" OutConditionMax="0.75" />
-		<Item identifier="iron" amount="3" />
-	</Deconstruct>-->
-	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
-	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="1,458,327,104" depth="0.55" origin="0.5,0.5" />
-	<Body width="326" height="104" density="50" />
-	<Holdable slots="RightHand+LeftHand,Any" controlpose="true" holdpos="35,-20" aimpos="55,-5" handle1="-50,-28" handle2="95,-20" holdangle="-30" msg="ItemMsgPickUpSelect">
-		<!-- Accuracy -->
-		<StatusEffect type="OnActive" targettype="this" tags="holding" delay="0.1" interval="0.5" duration="0.65" disabledeltatime="true" />
-		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="0" spread="0" setvalue="true">
-			<Conditional HasStatusTag="! holding" />
-		</StatusEffect>
-		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" spread="-50">
-			<Conditional spread="gt 1" />
-		</StatusEffect>
-		<StatusEffect type="OnActive" targettype="this" targetitemcomponent="RangedWeapon" unskilledspread="-30">
-			<Conditional unskilledspread="gt 1" />
-		</StatusEffect>
-		<!-- Play loading sound -->
-		<StatusEffect type="OnActive" targettype="This" stackable="false" comparison="and">
-			<RequiredItems identifiers="7.62x51ammo_s" type="Contained" />
-			<Conditional HasStatusTag="! loaded" />
-			<Sound file="%ModDir%/Sounds/Impact/impact_magazine_ma5b.ogg" range="1000" loop="false" volume="2.5" />
-		</StatusEffect>
-		<StatusEffect type="OnActive" targettype="This" tags="loaded" delay="0.1" disabledeltatime="true">
-			<RequiredItems identifiers="7.62x51ammo_s" type="Contained" />
-		</StatusEffect>
-	</Holdable>
-	<RangedWeapon reload="0.275" barrelpos="150,20" spread="5" unskilledspread="5" combatPriority="71" drawhudwhenequipped="true" crosshairscale="0.15" holdtrigger="true">
-		<Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
-		<CrosshairPointer texture="%ModDir%/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
-		<ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
-		<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="30" anglemin="0" anglemax="0" colormultiplier="255,255,255,255" scalemultiplier="0.08,0.3" />
-		<StatusEffect type="OnUse" targettype="this" forceplaysounds="true">
-			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_1.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
-			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_2.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
-			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_3.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
-			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_4.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
-			<Sound file="%ModDir%/Items/Weapons/General Sounds/MA5B_shot_5.ogg" type="OnUse" volume="0.75" range="3000" selectionmode="Random" />
-		</StatusEffect>
-		<!-- Accuracy -->
-		<StatusEffect type="OnUse" targettype="this" spread="5" disabledeltatime="true">
-			<Conditional spread="lt 60" />
-		</StatusEffect>
-		<StatusEffect type="OnUse" targettype="this" unskilledspread="10" disabledeltatime="true">
-			<Conditional unskilledspread="lt 60" />
-		</StatusEffect>
-		<StatusEffect type="OnUse" targettype="this">
-			<Explosion range="80.0" force="0.8" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="0.0" />
-			<Spawnitem identifier="nh_casing_med" amount="1" spawnposition="This" />
-		</StatusEffect>
-		<!--"Use" contained magazine to spawn projectiles.-->
-		<StatusEffect type="OnUse" targettype="Contained">
-			<Use />
-		</StatusEffect>
-		<RequiredItems identifiers="7.62x51ammo_s" type="Contained" msg="ItemMsgAmmoRequired" />
-		<RequiredSkill identifier="weapons" level="20" />
-		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1000" castshadows="true" setvalue="true" />
-		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1" castshadows="false" setvalue="true" delay="0.05" disabledeltatime="true" />
-		<!-- Quality accuracy -->
-		<StatusEffect type="OnUse" targettype="this" spread="-0.25" unskilledspread="-0.5" disabledeltatime="true" comparison="and">
-			<Conditional Quality="eq 1" />
-		</StatusEffect>
-		<StatusEffect type="OnUse" targettype="this" spread="-0.5" unskilledspread="-1" disabledeltatime="true" comparison="and">
-			<Conditional Quality="eq 2" />
-		</StatusEffect>
-		<StatusEffect type="OnUse" targettype="this" spread="-0.75" unskilledspread="-1.5" disabledeltatime="true" comparison="and">
-			<Conditional Quality="eq 3" />
-		</StatusEffect>
-	</RangedWeapon>
-	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,150,80,180" range="1" castshadows="false" allowingameediting="false" ison="true">
-		<LightTexture texture="Content/Lights/pointlight_falloff.png" origin="0.5,0.5" />
-	</LightComponent>
-	<ItemContainer itempos="12,-2" maxstacksize="1" capacity="1" hideitems="false" containedspritedepth="0.54" containedstateindicatorslot="0">
-		<ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="4,133,68,12" />
-		<SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
-		<SlotIcon slotindex="1" texture="%ModDir%/UI/attachment_Icons.png" sourcerect="7,181,152,152" origin="0.5,0.5" />
-		<Containable identifiers="7.62x51ammo_s" />
-		<SubContainer capacity="1" maxstacksize="1">
-			<Containable items="flashlight" hide="true" itempos="25,-4" setactive="true" />
-			<Containable items="medium_attachment" hide="false" itempos="30,1" setactive="true" />
-		</SubContainer>
-	</ItemContainer>
-	<aitarget sightrange="2000" soundrange="4000" fadeouttime="2" />
-	<Quality>
-		<QualityStat stattype="FiringRateMultiplier" value="0.333334" />
-	</Quality>
-	<Upgrade gameversion="1.6.18.1" InventoryIconColor="85,180,255,255" />
-</Item>
 
 <!-- Halo Reach Assault Rifle -->
 <Item name="" identifier="nh_ma37" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" equip="true" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_7.62x51_consumer" Scale="0.34" impactsoundtag="impact_metal_light">
@@ -1723,7 +1614,7 @@
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" />
 	</Price>
-	<Fabricate suitablefabricators="weaponfabricator" requiredtime="20">
+	<Fabricate suitablefabricators="fabricator,weaponfabricator" requiredtime="20">
 		<RequiredSkill identifier="mechanical" level="15" />
 		<RequiredSkill identifier="weapons" level="25" />
 		<RequiredItem identifier="nh_m6c" amount="1" />

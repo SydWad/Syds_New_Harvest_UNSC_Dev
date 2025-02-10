@@ -3,6 +3,9 @@
   <!-- Captain Uniform -->
   <Item name="" identifier="nh_captainuniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer secondary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+    <Deconstruct time="2">
+		<Item identifier="organicfiber" />
+    </Deconstruct>
     <InventoryIcon name="Captain Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
     <Sprite name="Captain Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,0,128,64" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
@@ -31,6 +34,8 @@
   <Item name="" identifier="nh_captain_cap" scale="0.4" SpriteColor="255,230,255,255" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
+    <Deconstruct time="1">
+    </Deconstruct>
     <Price baseprice="150">
       <Price storeidentifier="merchantcity" minavailable="1" />
       <Price storeidentifier="merchantmilitary" multiplier="0.5" minavailable="3" />
@@ -113,6 +118,8 @@
   <Item name="Admiral Cap" identifier="nh_admiral_cap" scale="0.4" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
     <PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.01" />
+    <Deconstruct time="1">
+    </Deconstruct>
     <Price baseprice="150">
       <Price storeidentifier="merchantcity" minavailable="1" />
       <Price storeidentifier="merchantmilitary" multiplier="0.5" minavailable="3" />
@@ -131,6 +138,9 @@
   <!-- Admiral Uniform -->
   <Item name="Admiral Uniform" identifier="nh_admiraluniform" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer secondary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" />
+    <Deconstruct time="2">
+		<Item identifier="organicfiber" />
+    </Deconstruct>
     <InventoryIcon name="Captain Uniform Icon" texture="%ModDir%/Items/Jobgear/OutfitIcons.png" sourcerect="384,384,128,128" origin="0.5,0.5" />
     <Sprite name="Admiral Uniform" texture="%ModDir%/Items/Jobgear/clothes.png" sourcerect="0,0,128,64" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" modversion="1.0.2" corepackage="False" steamworkshopid="3096140652" gameversion="1.7.7.0">
+<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" modversion="1.0.3" corepackage="False" steamworkshopid="3096140652" gameversion="1.7.7.0">
   <ItemAssembly file="%ModDir%/NH_Dev_Items.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions_Wearable.xml" />
@@ -15,7 +15,9 @@
   <Item file="%ModDir%/Items/Weapons/ammo_unsc.xml" />
   <Item file="%ModDir%/Items/Weapons/weapons_misc.xml" />
   <Item file="%ModDir%/Items/Weapons/ship_weapons.xml" />
+  <Item file="%ModDir%/Items/Weapons/weapons_ini.xml" />
   <Item file="%ModDir%/Items/Jobgear/Armor/unsc_combatgear.xml" />
+  <Item file="%ModDir%/Items/Jobgear/Armor/ini_combatgear.xml" />
   <Text file="%ModDir%/Texts/English/English.xml" />
   <Text file="%ModDir%/Texts/English/EnglishFactions.xml" />
   <Text file="%ModDir%/Texts/Русский/Русский.xml" />
