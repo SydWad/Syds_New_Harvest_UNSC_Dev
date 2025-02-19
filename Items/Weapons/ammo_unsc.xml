@@ -9,17 +9,26 @@
 <Item name="" identifier="nh_havoknuke" health="1800" MaxStackSize="10" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" SpriteColor="215,215,215,255" cargocontaineridentifier="explosivecrate" tags="mediumitem,weapon,explosive" scale="0.15" impactsoundtag="impact_metal_heavy">
 	<PreferredContainer primary="nh_dev_ammo" amount="10" spawnprobability="1" NotCampaign="true" />
 	<!-- 1500 -->
-	<Price baseprice="750" BuyingPriceMultiplier="2.0" sold="false" MinLevelDifficulty="35" CanBeSpecial="false">
-		<Price storeidentifier="merchantmine" MinAvailable="0" MaxAvailable="3">
+	<Price baseprice="1000" BuyingPriceMultiplier="2.0" CanBeSpecial="false" >
+		<Price storeidentifier="merchantclown" sold="True" MinAvailable="1" MaxAvailable="1" CanBeSpecial="true" MinLevelDifficulty="0">
+			<Reputation faction="clowns" min="85" />
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="True" MinAvailable="1" MaxAvailable="60" RequiredFaction="coalition" MinLevelDifficulty="35">
+			<Reputation faction="coalition" min="99" />
+		</Price>
+	</Price>
+	<!-- 1500 -->
+	<Price baseprice="750" BuyingPriceMultiplier="2.0" CanBeSpecial="false">
+		<Price storeidentifier="merchantmine" sold="True" MinAvailable="0" MaxAvailable="1" RequiredFaction="separatists" MinLevelDifficulty="35">
 			<Reputation faction="separatists" min="70" />
 		</Price>
-		<Price storeidentifier="merchantresearch" MinAvailable="1" MaxAvailable="8">
+		<Price storeidentifier="merchantresearch" sold="True" MinAvailable="1" MaxAvailable="8" RequiredFaction="separatists" MinLevelDifficulty="35">
 			<Reputation faction="separatists" min="70" />
 		</Price>
-		<Price storeidentifier="merchantmilitary" MinAvailable="1" MaxAvailable="15">
+		<Price storeidentifier="merchantmilitary" sold="True" MinAvailable="1" MaxAvailable="15" RequiredFaction="separatists" MinLevelDifficulty="35">
 			<Reputation faction="separatists" min="70" />
 		</Price>
-		<Price storeidentifier="merchantarmory" MinAvailable="1" MaxAvailable="15">
+		<Price storeidentifier="merchantarmory" sold="True" MinAvailable="1" MaxAvailable="15" RequiredFaction="separatists" MinLevelDifficulty="35">
 			<Reputation faction="separatists" min="70" />
 		</Price>
 	</Price>
@@ -266,20 +275,24 @@
 <Item name="" identifier="nh_fraggrenade" MaxStackSize="15" MaxStackSizeCharacterInventory="2" MaxStackSizeHoldableOrWearableInventory="4" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive" scale="0.3" impactsoundtag="impact_grenade_frag" DamagedByExplosions="False">
 	<PreferredContainer primary="nh_dev_ammo" amount="15" spawnprobability="1" NotCampaign="true" />
 	<!-- 150 -->
-	<Price baseprice="75" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="1" CanBeSpecial="false">
+	<Price baseprice="75" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="2"/>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="2">
-			<Reputation faction="coalition" min="30" />
-			<Reputation faction="separatists" min="15" />
-		</Price>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="3"/>
-		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="15">
 			<Reputation faction="coalition" min="30" />
-			<Reputation faction="separatists" min="15" />
 		</Price>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="25">
 			<Reputation faction="coalition" min="30" />
+		</Price>
+	</Price>
+	<!-- 150 -->
+	<Price baseprice="75" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="2"/>
+		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="3"/>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="15" CanBeSpecial="true">
+			<Reputation faction="separatists" min="15" />
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="25" CanBeSpecial="true">
 			<Reputation faction="separatists" min="15" />
 		</Price>
 	</Price>
@@ -402,7 +415,7 @@
 //// Heavy Weapons ////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////// -->
 
-<Item name="Splaser Projectile" identifier="nh_m6g_gnr_blast" interactthroughwalls="true" tags="nh_m6g_gnr_projectile" hideinmenus="true" scale="0.5">
+<Item name="Splaser Projectile" identifier="nh_m6g_gnr_blast" interactthroughwalls="true" hideinmenus="true" scale="0.5">
 	<Sprite texture="%ModDir%/Items/Weapons/nh_m6g-gnr_blast.png" sourcerect="0,0,40,40" depth="0.55" />
 	<Body width="40" height="14" density="40" />
 	<!-- lol -->
@@ -593,10 +606,6 @@
 	<PreferredContainer primary="nh_dev_ammo" amount="10" spawnprobability="1" NotCampaign="true" />
 	<!-- 800 -->
 	<Price baseprice="400" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
-		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15">
 			<Reputation faction="coalition" min="60" />
 		</Price>
@@ -655,21 +664,26 @@
 	<PreferredContainer primary="nh_14.5x11_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
 	<!-- 400 -->
-	<Price baseprice="200" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="2">
-			<Reputation faction="separatists" min="50" />
-		</Price>
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
-		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="3" >
+	<Price baseprice="200" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" CanBeSpecial="false">
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="3" RequiredFaction="coalition" >
 			<Reputation faction="coalition" min="50" />
 		</Price>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15">
 			<Reputation faction="coalition" min="60" />
-			<Reputation faction="separatists" min="30" />
 		</Price>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true">
 			<Reputation faction="coalition" min="60" />
+		</Price>
+	</Price>
+	<!-- 400 -->
+	<Price baseprice="200" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" CanBeSpecial="false">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="2" RequiredFaction="separatists">
+			<Reputation faction="separatists" min="50" />
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15">
+			<Reputation faction="separatists" min="30" />
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true">
 			<Reputation faction="separatists" min="30" />
 		</Price>
 	</Price>
@@ -793,18 +807,15 @@
 	<PreferredContainer primary="nh_102mm_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="10" spawnprobability="1" NotCampaign="true" />
 	<!-- 600 -->
-	<Price baseprice="300" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
-		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="1" >
+	<Price baseprice="300" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" CanBeSpecial="false">
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="1" RequiredFaction="coalition">
 			<Reputation faction="coalition" min="50" />
 		</Price>
-		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15" CanBeSpecial="true">
-			<Reputation faction="coalition" min="60" />
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15" CanBeSpecial="true" RequiredFaction="coalition">
+			<Reputation faction="coalition" min="35" />
 		</Price>
-		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true">
-			<Reputation faction="coalition" min="60" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true" RequiredFaction="coalition">
+			<Reputation faction="coalition" min="35" />
 		</Price>
 	</Price>
 	<!-- Fab -->
@@ -997,18 +1008,15 @@
 	<PreferredContainer primary="nh_102mm_consumer" amount="1" spawnprobability="0.5" CampaignOnly="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="10" spawnprobability="1" NotCampaign="true" />
 	<!-- 600 -->
-	<Price baseprice="300" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
-		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="1" >
+	<Price baseprice="300" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" CanBeSpecial="false">
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="1" RequiredFaction="coalition">
 			<Reputation faction="coalition" min="50" />
 		</Price>
-		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15" CanBeSpecial="true">
-			<Reputation faction="coalition" min="60" />
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="15" CanBeSpecial="true" RequiredFaction="coalition">
+			<Reputation faction="coalition" min="35" />
 		</Price>
-		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true">
-			<Reputation faction="coalition" min="60" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true" RequiredFaction="coalition">
+			<Reputation faction="coalition" min="35" />
 		</Price>
 	</Price>
 	<!-- Fab -->
@@ -1195,23 +1203,26 @@
 	<PreferredContainer primary="nh_40mm_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="25" spawnprobability="1" NotCampaign="true" />
 	<!-- 110 -->
-	<Price baseprice="55" BuyingPriceMultiplier="2.0" MinLevelDifficulty="10" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
+	<Price baseprice="55" BuyingPriceMultiplier="2.0" MinLevelDifficulty="10" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="5">
 			<Reputation faction="coalition" min="15" />
-			<Reputation faction="separatists" min="5" />
 		</Price>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="5">
-			<Reputation faction="coalition" min="30" />
-			<Reputation faction="separatists" min="18" />
-		</Price>
-		<Price storeidentifier="merchantmine" sold="false" />
-		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="3" MaxAvailable="25" CanBeSpecial="true">
 			<Reputation faction="coalition" min="30" />
-			<Reputation faction="separatists" min="18" />
 		</Price>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="40" CanBeSpecial="true">
 			<Reputation faction="coalition" min="30" />
+		</Price>
+	</Price>
+	<!-- 110 -->
+	<Price baseprice="55" BuyingPriceMultiplier="2.0" MinLevelDifficulty="10" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="5">
+			<Reputation faction="separatists" min="5" />
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="3" MaxAvailable="25" CanBeSpecial="true">
+			<Reputation faction="separatists" min="18" />
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="40" CanBeSpecial="true">
 			<Reputation faction="separatists" min="18" />
 		</Price>
 	</Price>
@@ -1288,31 +1299,30 @@
 	<PreferredContainer primary="nh_napalm_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="8" spawnprobability="1" NotCampaign="true" />
 	<!-- 175 -->
-	<Price baseprice="88" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
+	<Price baseprice="88" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="3">
 			<Reputation faction="coalition" min="20" />
-			<Reputation faction="separatists" min="1" />
-		</Price>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="5">
-			<Reputation faction="coalition" min="35" />
-			<Reputation faction="separatists" min="10" />
 		</Price>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="15">
 			<Reputation faction="coalition" min="20" />
-			<Reputation faction="separatists" min="1" />
 		</Price>
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="3">
 			<Reputation faction="coalition" min="35" />
-			<Reputation faction="separatists" min="10" />
 		</Price>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="15" CanBeSpecial="true">
 			<Reputation faction="coalition" min="35" />
-			<Reputation faction="separatists" min="10" />
 		</Price>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="40" CanBeSpecial="true">
 			<Reputation faction="coalition" min="35" />
-			<Reputation faction="separatists" min="10" />
 		</Price>
+	</Price>
+	<!-- 175 -->
+	<Price baseprice="88" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="3"/>
+		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="15"/>
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="3"/>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="15" CanBeSpecial="true"/>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="40" CanBeSpecial="true"/>
 	</Price>
 	<Fabricate suitablefabricators="ammofabricator" requiredtime="10">
 		<RequiredSkill identifier="mechanical" level="20" />
@@ -1425,18 +1435,12 @@
 	<PreferredContainer primary="nh_7.62x51_m_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="10" spawnprobability="1" NotCampaign="true" />
 	<!-- 1300 -->
-	<Price baseprice="650" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false"/>
-		<Price storeidentifier="merchantcity" sold="false"/>
-		<Price storeidentifier="merchantmine" sold="false"/>
-		<Price storeidentifier="merchantresearch" sold="false"/>
-		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="8">
+	<Price baseprice="650" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false">
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="8" RequiredFaction="coalition">
 			<Reputation faction="coalition" min="35" />
-			<Reputation faction="separatists" min="10" />
 		</Price>
-		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="15">
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="15" RequiredFaction="coalition">
 			<Reputation faction="coalition" min="35" />
-			<Reputation faction="separatists" min="10" />
 		</Price>
 	</Price>
 	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="71,466,50,28" />
@@ -1494,18 +1498,19 @@
 	<PreferredContainer primary="nh_7.62x51_consumer" spawnprobability="0.05" CampaignOnly="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
 	<!-- 500 -->
-	<Price baseprice="150" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false"/>
-		<Price storeidentifier="merchantcity" sold="false"/>
-		<Price storeidentifier="merchantmine" sold="false"/>
-		<Price storeidentifier="merchantresearch" sold="false"/>
+	<Price baseprice="150" BuyingPriceMultiplier="2.0" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="10">
 			<Reputation faction="coalition" min="15" />
-			<Reputation faction="separatists" min="1" />
 		</Price>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="25" CanBeSpecial="true">
 			<Reputation faction="coalition" min="15" />
-			<Reputation faction="separatists" min="1" />
+		</Price>
+	</Price>
+	<!-- 500 -->
+	<Price baseprice="150" BuyingPriceMultiplier="2.0" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="10">
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="25" CanBeSpecial="true">
 		</Price>
 	</Price>
 	<InventoryIcon texture="%ModDir%/Items/InventoryIcons2.png" sourcerect="263,71,51,50" />
@@ -1562,14 +1567,20 @@
 	<PreferredContainer primary="nh_7.62x51_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
 	<!-- 220 -->
-	<Price baseprice="120" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="5" CanBeSpecial="false">
+	<Price baseprice="120" BuyingPriceMultiplier="2.0" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="3"/>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="1" MaxAvailable="10"/>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="1" MaxAvailable="5"/>
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="3">
 			<Reputation faction="coalition" min="15" />
-			<Reputation faction="separatists" min="1" />
 		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="25" CanBeSpecial="true"/>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="50" CanBeSpecial="true"/>
+	</Price>
+	<!-- 220 -->
+	<Price baseprice="120" BuyingPriceMultiplier="2.0" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="3"/>
+		<Price storeidentifier="merchantmine" sold="true" MinAvailable="1" MaxAvailable="5"/>
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="3"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="25" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="50" CanBeSpecial="true"/>
 	</Price>
@@ -1625,9 +1636,8 @@
 	<PreferredContainer secondary="nh_7.62x51_consumer" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="32" spawnprobability="1" NotCampaign="true" />
 	<!-- 100 -->
-	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="10" CanBeSpecial="false">
+	<Price baseprice="50" BuyingPriceMultiplier="2.0" CanBeSpecial="false">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="10"/>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="1" MaxAvailable="25"/>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="1" MaxAvailable="15"/>
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="10"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="50" CanBeSpecial="true"/>
@@ -1714,14 +1724,17 @@
 	<PreferredContainer primary="nh_9.5x40_consumer" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="15" spawnprobability="1" NotCampaign="true" />
 	<!-- 200 -->
-	<Price baseprice="100" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="2">
-			<Reputation faction="separatists" min="1" />
-		</Price>
-		<Price storeidentifier="merchantcity" sold="false"/>
-		<Price storeidentifier="merchantmine" sold="false"/>
+	<Price baseprice="100" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="5">
 			<Reputation faction="coalition" min="35" />
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="15" CanBeSpecial="true"/>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="25" CanBeSpecial="true"/>
+	</Price>
+	<!-- 200 -->
+	<Price baseprice="100" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="2" />
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="5">
 			<Reputation faction="separatists" min="10" />
 		</Price>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="15" CanBeSpecial="true"/>
@@ -1779,14 +1792,16 @@
 	<PreferredContainer secondary="nh_9.5x40_consumer" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="25" spawnprobability="1" NotCampaign="true" />
 	<!-- 100 -->
-	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false"/>
-		<Price storeidentifier="merchantmine" sold="false"/>
+	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="15">
 			<Reputation faction="coalition" min="25" />
-			<Reputation faction="separatists" min="1" />
 		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" CanBeSpecial="true"/>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="50" CanBeSpecial="true"/>
+	</Price>
+	<!-- 100 -->
+	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="15"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="50" CanBeSpecial="true"/>
 	</Price>
@@ -1913,9 +1928,8 @@
 	<PreferredContainer primary="nh_5x23_consumer" spawnprobability="1" />
 	<PreferredContainer primary="nh_dev_ammo" amount="32" spawnprobability="1" NotCampaign="true" />
 	<!-- 60 -->
-	<Price baseprice="30" BuyingPriceMultiplier="2.0" MinLevelDifficulty="0" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
+	<Price baseprice="30" BuyingPriceMultiplier="2.0" CanBeSpecial="false">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="15" CanBeSpecial="true"/>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="25" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="10"/>
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="15"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="40" CanBeSpecial="true"/>
@@ -1995,12 +2009,16 @@
 	<PreferredContainer primary="nh_12.7x58_consumer" spawnprobability="1" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
 	<!-- 100 -->
-	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false"/>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="10" CanBeSpecial="true"/>
-		<Price storeidentifier="merchantmine" sold="false"/>
+	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="5">
 			<Reputation faction="coalition" min="20" />
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="20" CanBeSpecial="true"/>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="35" CanBeSpecial="true"/>
+	</Price>
+	<!-- 100 -->
+	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" CanBeSpecial="false" RequiredFaction="separatists">
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="5">
 			<Reputation faction="separatists" min="5" />
 		</Price>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="20" CanBeSpecial="true"/>
@@ -2098,7 +2116,6 @@
 	<!-- 20 -->
 	<Price baseprice="10" BuyingPriceMultiplier="2.0" MinLevelDifficulty="0" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="5" CanBeSpecial="true"/>
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="20" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="10"/>
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="35"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="80" CanBeSpecial="true"/>
@@ -2184,12 +2201,10 @@
 	<PreferredContainer secondary="nh_8g_consumer" minamount="6" maxamount="12" spawnprobability="1" CampaignOnly="true" />
 	<PreferredContainer primary="nh_8g_consumer" amount="12" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
-	<!-- 15 -->
-	<Price baseprice="7" BuyingPriceMultiplier="2.0" MinLevelDifficulty="0" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
+	<!-- 16 -->
+	<Price baseprice="8" BuyingPriceMultiplier="2.0" CanBeSpecial="false">
 		<Price storeidentifier="merchantoutpost" sold="true" MinAvailable="0" MaxAvailable="10" />
-		<Price storeidentifier="merchantcity" sold="true" MinAvailable="0" MaxAvailable="20" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="35"/>
-		<Price storeidentifier="merchantresearch" sold="false"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="60" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="100" CanBeSpecial="true"/>
 	</Price>
@@ -2238,12 +2253,9 @@
 <Item name="" identifier="nh_8g_pvp" MaxStackSize="20" MaxStackSizeCharacterInventory="6" MaxStackSizeHoldableOrWearableInventory="12" category="Weapon" subcategory="Halo" InventoryIconColor="255,100,100,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,nh_m90ammo,shotgunammo" Scale="0.32" impactsoundtag="impact_shotgunshell">
 	<PreferredContainer primary="nh_8g_consumer" amount="12" spawnprobability="0.05" CampaignOnly="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
-	<!-- 18 -->
-	<Price baseprice="9" BuyingPriceMultiplier="2.0" MinLevelDifficulty="25" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false"/>
+	<!-- 20 -->
+	<Price baseprice="10" BuyingPriceMultiplier="2.0" MinLevelDifficulty="25" CanBeSpecial="false">
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="15"/>
-		<Price storeidentifier="merchantresearch" sold="false"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="60" CanBeSpecial="true"/>
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="3" MaxAvailable="100" CanBeSpecial="true"/>
 	</Price>
@@ -2295,10 +2307,8 @@
 <Item name="" identifier="nh_8g_slug" MaxStackSize="20" MaxStackSizeCharacterInventory="6" MaxStackSizeHoldableOrWearableInventory="12" category="Weapon" subcategory="Halo" InventoryIconColor="85,255,180,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,nh_m90ammo,shotgunammo" Scale="0.32" impactsoundtag="impact_shotgunshell">
 	<PreferredContainer primary="nh_8g_consumer" amount="12" spawnprobability="0.05" CampaignOnly="true" />
 	<PreferredContainer primary="nh_dev_ammo" amount="20" spawnprobability="1" NotCampaign="true" />
-	<!-- 18 -->
-	<Price baseprice="9" BuyingPriceMultiplier="2.0" MinLevelDifficulty="25" MinAvailable="0" MaxAvailable="0" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false"/>
+	<!-- 20 -->
+	<Price baseprice="10" BuyingPriceMultiplier="2.0" MinLevelDifficulty="25" CanBeSpecial="false">
 		<Price storeidentifier="merchantmine" sold="true" MinAvailable="0" MaxAvailable="15"/>
 		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="0" MaxAvailable="30"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="60" CanBeSpecial="true"/>

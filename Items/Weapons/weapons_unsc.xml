@@ -9,10 +9,6 @@
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<!-- 2500 -->
 	<Price baseprice="1250" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="1" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
-		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="True" MinAvailable="1" MaxAvailable="3">
 			<Reputation faction="coalition" min="75" />
 			<Reputation faction="separatists" min="60" />
@@ -189,15 +185,10 @@
 <!-- Halo 3 Spartan Laser -->
 <Item name="" identifier="nh_m6g_gnr" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="nh_largecrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.26" impactsoundtag="impact_weapon_m41" AllowSellingWhenBroken="true" HideConditionBar="true" HideConditionInTooltip="true">
 	<!-- 4500 -->
-	<Price baseprice="2250" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="1" MaxAvailable="1" CanBeSpecial="False">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
+	<Price baseprice="2250" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="1" MaxAvailable="1" CanBeSpecial="False" RequiredFaction="coalition">
 		<Price storeidentifier="merchantresearch" sold="True">
 			<Reputation faction="coalition" min="75" />
 		</Price>
-		<Price storeidentifier="merchantmilitary" sold="false" />
-		<Price storeidentifier="merchantarmory" sold="false" />
 	</Price>
 	<Fabricate suitablefabricators="weaponfabricator" requiredtime="150">
 		<RequiredSkill identifier="electrical" level="100" />
@@ -237,16 +228,16 @@
 			<Conditional spread="lt 0" />
 		</StatusEffect>
 	</Holdable>
-	<RangedWeapon suitableprojectiles="nh_dev_m6g_gnr_timer" reload="0.33" barrelpos="170,10" unskilledspread="0" spread="0" combatPriority="100" drawhudwhenequipped="true" forceplaysounds="true" holdtrigger="true">
+	<RangedWeapon suitableprojectiles="nh_dev_m6g_gnr_timer" reload="0.15" barrelpos="170,10" unskilledspread="0" spread="0" combatPriority="100" drawhudwhenequipped="true" forceplaysounds="true" holdtrigger="true">
 		<Crosshair texture="%ModDir%/Items/Weapons/Crosshairs.png" sourcerect="1024,256,256,256" />
 		<CrosshairPointer texture="%ModDir%/Items/Weapons/Crosshairs.png" sourcerect="512,512,256,256" />
 		<!-- Got an odd bug with the aiming reticle when the weapon first spawns in with spread already increased, so instead it just increases it a moment after first spawning in -->
 		<StatusEffect type="Always" OneShot="True" targettype="This" unskilledspread="45" spread="45" delay="0.1" disabledeltatime="true" setvalue="true" />
 		<!-- Decrease the spread as the weapon charges according to the increasing spread (see Holdable) and try line up the timing with when its ready to fire -->
-		<StatusEffect type="OnUse" targettype="This" duration="0.33" stackable="true" unskilledspread="-0.735" spread="-0.735" disabledeltatime="true" />
-		<!-- Turn on targeting laser when the weapon is charging -->
+		<StatusEffect type="OnUse" targettype="This" duration="0.15" stackable="true" unskilledspread="-0.735" spread="-0.735" disabledeltatime="true" />
+		<!-- Turn on targeting laser when the weapon is charging
 		<StatusEffect type="OnUse" targettype="This" IsOn="true" disabledeltatime="true" targetitemcomponent="LightComponent" />
-		<StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.32" disabledeltatime="true" targetitemcomponent="LightComponent" />
+		<StatusEffect type="OnUse" targettype="This" IsOn="false" delay="0.32" disabledeltatime="true" targetitemcomponent="LightComponent" /> -->
 		<!-- Play aiming sound
 		<StatusEffect type="OnSecondaryUse" targettype="This" stackable="false" allowwhenbroken="true" >
 			<Sound file="%ModDir%/Items/Weapons/General Sounds/SPNKR_aim_1.ogg" range="1000" loop="false" volume="2.5" />
@@ -258,12 +249,16 @@
 			<Conditional spread="lteq 3" />
 			<Spawnitem identifier="nh_m6g_flash" amount="1" spawnposition="This" />
 		</StatusEffect>
+		<!-- Spawn the laser pointer (Normally i would have it be fired like a normal projectile, but in this case since the accuracy changes the laser spread would change as well) -->
+		<StatusEffect type="OnUse" target="This" >
+			<SpawnItem identifier="nh_splaser_pointer" spawnposition="This" count="1" rotationtype="Collider" />
+		</StatusEffect>
 		<!-- For some reason "level 20" weapons skill is the true neutral between HighSkillSpread and UnskilledSpread, dont ask me why -->
 		<RequiredSkill identifier="weapons" level="20" />
 		<RequiredItems items="nh_pscu,alienpowercell,fulguriumfuelrod" type="Contained" />
 		<RequiredItems items="nh_dev_m6g_gnr_timer" type="Contained" />
 	</RangedWeapon>
-	<RangedWeapon suitableprojectiles="nh_m6g_gnr_projectile" reload="5.0" holdtrigger="true" barrelpos="170,15" drawhudwhenequipped="false" maxchargetime="2.5" ChargeSoundWindupPitchSlide="1.0,1.0" combatPriority="-1">
+	<RangedWeapon suitableprojectiles="nh_m6g_gnr_blast" reload="5.0" holdtrigger="true" barrelpos="170,15" drawhudwhenequipped="false" maxchargetime="2.5" ChargeSoundWindupPitchSlide="1.0,1.0" combatPriority="-1">
 		<ParticleEmitter particle="FlareBubbles" scalemin="1.4" scalemax="1.8" particleamount="14" anglemin="0" anglemax="360" velocitymin="0" velocitymax="50" />
 		<ParticleEmitter particle="GlowDot" scalemin="8.0" scalemax="8.0" particleamount="20" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" colormultiplier="255,75,75,255" DrawOnTop="false" />
 		<ParticleEmitterCharge particle="chargepulselaser" particlespersecond="8" scalemultiplier="3.0,0.1" anglemin="0" anglemax="360" />
@@ -326,7 +321,7 @@
 		<StatusEffect type="OnUse" target="Contained" condition="-2670" targetitemslot="0" disabledeltatime="true" />
 		<RequiredItems items="nh_pscu,alienpowercell,fulguriumfuelrod" type="Contained" msg="ItemMsgAmmoRequired" />
 	</RangedWeapon>
-	<!-- Multiple light components as to increase the visibility of the laser -->
+	<!-- Multiple light components as to increase the visibility of the laser
 	<LightComponent vulnerabletoemp="false" LightColor="255,0,0,255" range="2000" IsOn="false" canbeselected="False" drawhudwhenequipped="False" blinkfrequency="10" allowingameediting="false">
 		<LightTexture texture="%ModDir%/Lights/Laserlight2.png" origin="-0.005,0.485" size="1.0,0.1" depth="0.01" />
 	</LightComponent>
@@ -335,7 +330,7 @@
 	</LightComponent>
 	<LightComponent vulnerabletoemp="false" LightColor="255,0,0,255" range="2000" IsOn="false" canbeselected="False" drawhudwhenequipped="False" blinkfrequency="10" allowingameediting="false">
 		<LightTexture texture="%ModDir%/Lights/Laserlight2.png" origin="-0.005,0.485" size="1.0,0.1" depth="0.01" />
-	</LightComponent>
+	</LightComponent> -->
 	<ItemContainer capacity="1" maxstacksize="1" itempos="150,0" hideitems="true" removecontaineditemsondeconstruct="false" containedstateindicatorslot="0" containedstateindicatorstyle="battery">
 		<SlotIcon slotindex="0" texture="%ModDir%/UI/Container_Icons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
 		<Containable identifiers="nh_pscu,fulguriumfuelrod">
@@ -353,7 +348,7 @@
 			<Containable identifiers="nh_dev_m6g_gnr_timer" />
 		</SubContainer>
 		<SubContainer capacity="1" maxstacksize="1" hideitems="true" itempos="150,0">
-			<Containable identifiers="nh_m6g_gnr_projectile" />
+			<Containable identifiers="nh_m6g_gnr_blast" />
 		</SubContainer>
 	</ItemContainer>
 	<Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
@@ -376,6 +371,29 @@
 			<Remove />
 		</StatusEffect>
 	</Holdable>
+</Item>
+<!-- Splaser Laser pointer (Using this instead of a light now because lights dissapear at a distance) -->
+<Item name="" identifier="nh_splaser_pointer" nameidentifier="nh_hide_from_console" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,headshot" impactsoundtag="impact_bulletsmall" scale="0.32" hideinmenus="true">
+	<InventoryIcon texture="%ModDir%/Items/InventoryIcons.png" sourcerect="448,192,64,64" origin="0.5,0.5" />
+	<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="764,157,69,6" depth="0.6" origin="0.5,0.5" />
+	<Body width="70" height="6" density="40" />
+	<Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+	<Projectile characterusable="false" hitscan="true" removeonhit="true" Spread="0" >
+		<ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,0,0,200" scalemultiplier="1.0,0.65" />
+		<Attack structuredamage="0" targetforce="0.0001" itemdamage="0" severlimbsprobability="0.0" >
+			<Affliction identifier="stun" strength="0.001" probability="0.0" />
+		</Attack>
+		<StatusEffect type="OnImpact" targettype="UseTarget,Limb" disabledeltatime="True">
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by1.ogg" volume="0.8" range="800" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by2.ogg" volume="0.8" range="800" selectionmode="Random" />
+			<!--<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by3.ogg" volume="0.8" range="800" selectionmode="Random" />-->
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by4.ogg" volume="0.8" range="800" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by5.ogg" volume="0.8" range="800" selectionmode="Random" />
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by6.ogg" volume="0.8" range="800" selectionmode="Random" />
+			<!--<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by7.ogg" volume="0.8" range="800" selectionmode="Random" />-->
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/m6g-gnr_tracer_by8.ogg" volume="0.8" range="800" selectionmode="Random" />
+		</StatusEffect>
+	</Projectile>
 </Item>
 
 <!-- A copy that can spawn inside dev containers fallbacknameidentifier -->
@@ -472,9 +490,6 @@
 <Item name="" identifier="nh_99cs2" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="nh_largecrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,nh_14.5x11_consumer" Scale="0.38" impactsoundtag="impact_weapon_99cs2">
 	<!-- 1300 -->
 	<Price baseprice="650" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="1" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="false" />
 		<Price storeidentifier="merchantresearch" sold="true" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="5">
 			<Reputation faction="coalition" min="75" />
@@ -532,7 +547,7 @@
 			<RequiredItems identifiers="14.5x114ammo" type="Contained" />
 		</StatusEffect>
 	</Holdable>
-	<RangedWeapon reload="0.6" barrelpos="180,0" unskilledspread="10" spread="0" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.15">
+	<RangedWeapon reload="1.5" barrelpos="180,0" unskilledspread="10" spread="0" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.15">
 		<Crosshair texture="%ModDir%/Items/Weapons/crosshairs.png" sourcerect="0,768,256,256" />
 		<CrosshairPointer texture="%ModDir%/Items/Weapons/crosshairs_2.png" sourcerect="0,256,256,256" />
 		<ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
@@ -630,11 +645,8 @@
 <!-- Halo CE Rocket Launcher -->
 <Item name="" identifier="nh_m41" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="nh_largecrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,nh_102mm_consumer" Scale="0.36" impactsoundtag="impact_weapon_m41" ShowContentsInTooltip="true">
 	<!-- 1100 -->
-	<Price baseprice="550" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="1" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
+	<Price baseprice="550" BuyingPriceMultiplier="2.0" MinLevelDifficulty="50" MinAvailable="0" MaxAvailable="1" CanBeSpecial="false" RequiredFaction="coalition">
 		<Price storeidentifier="merchantmine" sold="true" />
-		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="5">
 			<Reputation faction="coalition" min="75" />
 		</Price>
@@ -666,7 +678,15 @@
 	<!--<Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="283,276,388,114" depth="0.55" origin="0.5,0.5" />-->
 	<Sprite texture="%ModDir%/Items/Weapons/weapons3.png" sourcerect="316,274,295,116" depth="0.55" origin="0.55,0.4" />
 	<Body width="225" radius="45" density="60" />
-	<Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="20,12" aimpos="20,13" handle1="45,-50" handle2="130,-10" holdangle="-35" msg="ItemMsgPickUpSelect" />
+	<Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="20,12" aimpos="20,13" handle1="45,-50" handle2="130,-10" holdangle="-35" msg="ItemMsgPickUpSelect" >
+		<!-- I moved the sound effect trigger into both Holdable and ItemContainer because they are mutually exclusive and wont trigger when the item isnt being used by a character (aka when in a cabinet), this should cause less lag -->
+		<!-- Play loading sound -->
+		<StatusEffect type="OnActive" targettype="This" stackable="false">
+			<Sound file="%ModDir%/Items/Weapons/General Sounds/SPNKR_reload.ogg" range="300" loop="false" volume="3.5" />
+			<Conditional HasStatusTag="! loaded1" />
+		</StatusEffect>
+		<StatusEffect type="OnActive" targettype="This" tags="loaded1" delay="0.1" disabledeltatime="true" />
+	</Holdable>
 	<RangedWeapon suitableprojectiles="spnkr_ammo" barrelpos="180,15" unskilledspread="10" spread="0" combatPriority="100" drawhudwhenequipped="true" crosshairscale="0.15">
 		<Crosshair texture="%ModDir%/Items/Weapons/crosshairs.png" sourcerect="0,768,256,256" />
 		<CrosshairPointer texture="%ModDir%/Items/Weapons/crosshairs.png" sourcerect="256,256,256,256" />
@@ -708,21 +728,19 @@
 		<SlotIcon slotindex="1" texture="Content/UI/WeaponUI.png" sourcerect="192,960,64,64" origin="0.5,0.5" />
 		<Containable identifiers="spnkr_ammo">
 			<!-- Play loading sound -->
-			<StatusEffect type="OnContaining" targettype="This" stackable="false">
+			<StatusEffect type="OnWearing" targettype="This" stackable="false">
 				<Sound file="%ModDir%/Items/Weapons/General Sounds/SPNKR_reload.ogg" range="300" loop="false" volume="3.5" />
 				<Conditional HasStatusTag="! loaded1" />
 			</StatusEffect>
-			<StatusEffect type="OnContaining" targettype="This" tags="loaded1" delay="0.1" disabledeltatime="true" />
-			<!--<StatusEffect type="OnContaining" targettype="Contained" condition="99.9" setvalue="true" disabledeltatime="true" >
-				<Conditional Condition="gteq 100" />
-			</StatusEffect>-->
+			<StatusEffect type="OnWearing" targettype="This" tags="loaded1" delay="0.1" disabledeltatime="true" />
 		</Containable>
 	</ItemContainer>
 	<Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
 		<sprite name="M41-SPNKr Worn" texture="%ModDir%/Items/Weapons/weapons3.png" sourcerect="316,274,295,116" canbehiddenbyotherwearables="false" rotation="90" depthlimb="Waist" inheritlimbdepth="true" limb="Torso" scale="0.36" origin="0.4,0.95" />
+		<!-- Spawn sprite -->
 		<StatusEffect type="OnWearing" targettype="Character" stackable="true" disabledeltatime="true">
 			<Affliction identifier="nh_spnkr_timer" amount="999" />
-			<RequiredItems identifiers="spnkr_ammo" type="Contained" />
+			<RequiredItem identifier="spnkr_ammo" type="Contained" />
 		</StatusEffect>
 	</Wearable>
 	<aitarget sightrange="4000" soundrange="5000" fadeouttime="8" />
@@ -855,10 +873,7 @@
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<!-- 750 -->
 	<Price baseprice="375" BuyingPriceMultiplier="2.0" MinLevelDifficulty="35" MinAvailable="0" MaxAvailable="1">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
-		<Price storeidentifier="merchantmine" sold="true" />
-		<Price storeidentifier="merchantresearch" sold="false" />
+		<Price storeidentifier="merchantmine" sold="true" RequiredFaction="separatists" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="7">
 			<Reputation faction="coalition" min="30" />
 			<Reputation faction="separatists" min="15" />
@@ -992,9 +1007,7 @@
 <Item name="" identifier="nh_m7057" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" Tags="mediumitem,weapon,gunmediumitem,gunsmith,mountableweapon,nh_napalm_consumer" cargocontaineridentifier="nh_largecrate" fireproof="true" Scale="0.32" impactsoundtag="impact_metal_light">
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<!-- 750 -->
-	<Price baseprice="375" BuyingPriceMultiplier="2.0" MinLevelDifficulty="35" MinAvailable="0" MaxAvailable="3" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="false" />
+	<Price baseprice="375" BuyingPriceMultiplier="2.0" MinLevelDifficulty="35" MinAvailable="0" MaxAvailable="3" CanBeSpecial="false" sold="false">
 		<Price storeidentifier="merchantmine" sold="true">
 			<Reputation faction="coalition" min="30" />
 			<Reputation faction="separatists" min="5" />
@@ -1128,10 +1141,9 @@
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<!-- 550 -->
 	<Price baseprice="275" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="7">
-		<Price storeidentifier="merchantoutpost" sold="true" />
-		<Price storeidentifier="merchantcity" sold="true" />
-		<Price storeidentifier="merchantmine" sold="true" />
-		<Price storeidentifier="merchantresearch" sold="true" MaxAvailable="15" />
+		<Price storeidentifier="merchantoutpost" sold="true" RequiredFaction="coalition"/>
+		<Price storeidentifier="merchantmine" sold="true" RequiredFaction="coalition"/>
+		<Price storeidentifier="merchantresearch" sold="true" MaxAvailable="15" RequiredFaction="coalition"/>
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" />
 	</Price>
@@ -1260,9 +1272,7 @@
 	<PreferredContainer secondary="weaponholder" spawnprobability="0.5" />
 	<!-- 700 -->
 	<Price baseprice="350" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="5">
-		<Price storeidentifier="merchantoutpost" sold="false" />
-		<Price storeidentifier="merchantcity" sold="true" />
-		<Price storeidentifier="merchantmine" sold="true" />
+		<Price storeidentifier="merchantmine" sold="true" RequiredFaction="coalition" />
 		<Price storeidentifier="merchantresearch" sold="false" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" />
@@ -1435,10 +1445,7 @@
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer secondary="weaponholder" spawnprobability="0.1" />
 	<!-- 700 -->
-	<Price baseprice="350" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="5">
-		<Price storeidentifier="merchantoutpost" sold="true" />
-		<Price storeidentifier="merchantcity" sold="true" />
-		<Price storeidentifier="merchantmine" sold="true" />
+	<Price baseprice="350" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="5" RequiredFaction="coalition">
 		<Price storeidentifier="merchantresearch" sold="true" MaxAvailable="15" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />
 		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" />
@@ -1606,9 +1613,8 @@
 <Item name="" identifier="nh_m7smg" MaxStackSize="2" MaxStackSizeCharacterInventory="1" MaxStackSizeHoldableOrWearableInventory="1" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="nh_smallcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_5x23_consumer" Scale="0.32" impactsoundtag="impact_weapon_m7">
 	<PreferredContainer secondary="nh_dev_gun" minamount="2" maxamount="2" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer secondary="weaponholder" spawnprobability="0.2" />
-	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="5">
+	<Price baseprice="50" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="5">
 		<Price storeidentifier="merchantoutpost" sold="true" />
-		<Price storeidentifier="merchantcity" sold="true" />
 		<Price storeidentifier="merchantmine" sold="true" />
 		<Price storeidentifier="merchantresearch" sold="true" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />
@@ -1696,7 +1702,11 @@
 <Item name="" identifier="nh_m7ssmg" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="nh_smallcrate" tags="smallautoweapon,smallitem,weapon,gun,gunsmith,mountableweapon,nh_5x23_consumer" Scale="0.32" impactsoundtag="impact_weapon_m7">
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer secondary="weaponholder" spawnprobability="0.1" />
-	<Price baseprice="500" sold="false" />
+	<!-- 550 -->
+	<Price baseprice="275" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="5" sold="false" RequiredFaction="coalition" >
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="0" MaxAvailable="10" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="0" MaxAvailable="10" />
+	</Price>
 	<Fabricate suitablefabricators="weaponfabricator" requiredtime="35">
 		<RequiredSkill identifier="mechanical" level="50" />
 		<RequiredSkill identifier="weapons" level="50" />
@@ -1757,25 +1767,10 @@
 	<PreferredContainer secondary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
 	<PreferredContainer secondary="weaponholder" spawnprobability="0.5" />
 	<!-- 250 -->
-	<Price baseprice="125" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="5">
-		<Price storeidentifier="merchantoutpost" sold="true">
-			<Reputation faction="coalition" min="1" />
-		</Price>
-		<Price storeidentifier="merchantcity" sold="true">
-			<Reputation faction="coalition" min="1" />
-		</Price>
-		<Price storeidentifier="merchantmine" sold="true">
-			<Reputation faction="coalition" min="1" />
-		</Price>
-		<Price storeidentifier="merchantresearch" sold="true">
-			<Reputation faction="coalition" min="1" />
-		</Price>
-		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35">
-			<Reputation faction="coalition" min="1" />
-		</Price>
-		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35">
-			<Reputation faction="coalition" min="1" />
-		</Price>
+	<Price baseprice="125" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="5" sold="false" RequiredFaction="coalition">
+		<Price storeidentifier="merchantresearch" sold="true"/>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35"/>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35"/>
 	</Price>
 	<Fabricate suitablefabricators="weaponfabricator" requiredtime="30">
 		<RequiredSkill identifier="mechanical" level="28" />
@@ -1870,7 +1865,6 @@
 	<!-- 60 -->
 	<Price baseprice="30" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="10">
 		<Price storeidentifier="merchantoutpost" sold="true" />
-		<Price storeidentifier="merchantcity" sold="true" />
 		<Price storeidentifier="merchantmine" sold="true" />
 		<Price storeidentifier="merchantresearch" sold="true" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />
@@ -2043,9 +2037,9 @@
 <!-- Halo CE Shotgun -->
 <Item name="" identifier="nh_m90" category="Weapon" subcategory="Halo" InventoryIconColor="85,180,255,255" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,nh_8g_consumer" Scale="0.32" impactsoundtag="impact_weapon_m90">
 	<PreferredContainer primary="nh_dev_gun" amount="1" spawnprobability="1" NotCampaign="true" />
+	<!-- 700 -->
 	<Price baseprice="350" BuyingPriceMultiplier="2.0" MinLevelDifficulty="15" MinAvailable="0" MaxAvailable="5">
 		<Price storeidentifier="merchantoutpost" sold="true" />
-		<Price storeidentifier="merchantcity" sold="true" />
 		<Price storeidentifier="merchantmine" sold="true" />
 		<Price storeidentifier="merchantresearch" sold="true" />
 		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="35" />

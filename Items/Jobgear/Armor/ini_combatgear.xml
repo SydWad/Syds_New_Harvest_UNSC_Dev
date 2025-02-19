@@ -7,12 +7,12 @@
 <!-- Insurrectionist Light  Armor -->
 <Item name="Insurrectionist Light Armor" identifier="nh_ini_armor_1" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
-	<Price baseprice="400">
-		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8" />
-		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
-		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	<!-- 350 -->
+	<Price baseprice="175" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="2" >
+		<Price storeidentifier="merchantoutpost" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmine" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="5" MaxAvailable="15" BuyingPriceMultiplier="1.5" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" BuyingPriceMultiplier="1.5" RequiredFaction="separatists" />
 	</Price>
 	<Fabricate suitablefabricators="fabricator" requiredtime="5">
 		<RequiredSkill identifier="weapons" level="30" />
@@ -59,12 +59,11 @@
 <!-- Insurrectionist Grenadier Armor -->
 <Item name="Insurrectionist Grenadier Armor" identifier="nh_ini_armor_2" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
-	<Price baseprice="550">
-		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8" />
-		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
-		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	<!-- 500 -->
+	<Price baseprice="250" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="2" >
+		<Price storeidentifier="merchantresearch" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="5" MaxAvailable="15" BuyingPriceMultiplier="1.75" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" BuyingPriceMultiplier="1.75" RequiredFaction="separatists" />
 	</Price>
 	<Fabricate suitablefabricators="fabricator" requiredtime="5">
 		<RequiredSkill identifier="weapons" level="40" />
@@ -122,12 +121,12 @@
 <!-- Insurrectionist Trooper Helmet -->
 <Item name="Insurrectionist Trooper Helmet" identifier="nh_ini_helmet_troop" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.38">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
-	<Price baseprice="200">
-		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8" />
-		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
-		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	<!-- 200 -->
+	<Price baseprice="100" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="5" >
+		<Price storeidentifier="merchantoutpost" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmine" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="5" MaxAvailable="15" BuyingPriceMultiplier="1.5" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" BuyingPriceMultiplier="1.5" RequiredFaction="separatists" />
 	</Price>
 	<Fabricate suitablefabricators="fabricator" requiredtime="10">
 		<RequiredSkill identifier="weapons" level="20" />
@@ -154,12 +153,13 @@
 <!-- Insurrectionist Diving Helmet -->
 <Item name="Insurrectionist Diving Helmet" identifier="nh_ini_helmet_diver" category="Equipment" tags="smallitem,diving,lightdiving,divinggear_wearableindoors,divingmask" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.38">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
-	<Price baseprice="300">
-		<Price storeidentifier="merchantoutpost" BuyingPriceMultiplier="1.5" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantcity" BuyingPriceMultiplier="1.25" multiplier="0.6" minamount="0" maxamount="8" />
-		<Price storeidentifier="merchantresearch" BuyingPriceMultiplier="1.25" multiplier="0.8" minamount="0" maxamount="2" />
-		<Price storeidentifier="merchantmilitary" multiplier="0.9" minamount="5" maxamount="15" />
-		<Price storeidentifier="merchantmine" BuyingPriceMultiplier="1.25" multiplier="0.7" minamount="0" maxamount="2" />
+	<!-- 275 -->
+	<Price baseprice="137" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="3" >
+		<Price storeidentifier="merchantoutpost" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmine" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantresearch" sold="true" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="5" MaxAvailable="15" BuyingPriceMultiplier="1.5" RequiredFaction="separatists" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="35" BuyingPriceMultiplier="1.5" RequiredFaction="separatists" />
 	</Price>
 	<Fabricate suitablefabricators="fabricator" requiredtime="5">
 		<RequiredSkill identifier="weapons" level="35" />
@@ -239,18 +239,48 @@
 </Item>
 
 <!-- ///////////////////////////////////////////////////////////
+//////////// Clothing //////////////////////////////////////////
+//////////////////////////////////////////////////////////// -->
+
+<!-- Insurrectionist Beret -->
+<Item name="" identifier="nh_ini_beret" scale="0.4" category="Equipment" tags="smallitem,clothing" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+	<PreferredContainer primary="nh_dev_cloth" minamount="1" maxamount="1" spawnprobability="1" NotCampaign="true" />
+	<PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.05" />
+	<Price baseprice="150">
+		<Price storeidentifier="merchantcity" minavailable="1" />
+		<Price storeidentifier="merchantmilitary" multiplier="0.5" minavailable="3" />
+	</Price>
+	<Sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="100,400,100,46" depth="0.5" origin="0.5,0.5" />
+	<Body width="55" radius="16" density="15" />
+	<Deconstruct time="1">
+		<Item identifier="organicfiber" OutConditionMin="0.5" OutConditionMax="0.5" />
+	</Deconstruct>
+	<Wearable slots="Any,Head">
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="100,400,100,100" limb="Head" rotation="5" inheritlimbdepth="true" inherittexturescale="true" scale="1.1" origin="0.61,0.57" />
+		<damagemodifier afflictionidentifiers="concussion" damagemultiplier="0.5" armorsector="0.0,360.0" />
+		<SkillModifier skillidentifier="helm" skillvalue="5" />
+		<SkillModifier skillidentifier="weapons" skillvalue="3" />
+	</Wearable>
+</Item>
+
+<!-- ///////////////////////////////////////////////////////////
 //////////// ODST Armors ///////////////////////////////////////
 //////////////////////////////////////////////////////////// -->
 
 <!-- Insurrectionist ODST Armor -->
 <Item name="Insurrectionist ODST Armor" identifier="nh_odst_armor_ini" category="Diving,Equipment" tags="smallitem,deepdiving,divinggear_wearableindoors" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
-	<Price baseprice="1000" sold="false" CanBeSpecial="false" RequiredFaction="separatists">
-		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
-		<Price storeidentifier="merchantcity" multiplier="0.7" />
-		<Price storeidentifier="merchantresearch" multiplier="0.8" />
-		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="2" minamount="1" maxamount="3"/>
-		<Price storeidentifier="merchantmine" multiplier="0.6" />
+	<!-- 1000 -->
+	<Price baseprice="500" sold="false" BuyingPriceMultiplier="2.0" >
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="1" MaxAvailable="2" RequiredFaction="separatists">
+			<Reputation faction="separatists" min="80" />
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="6" RequiredFaction="separatists" >
+			<Reputation faction="separatists" min="75" />
+		</Price>
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="6" RequiredFaction="separatists" >
+			<Reputation faction="separatists" min="75" />
+		</Price>
 	</Price>
 	<Fabricate suitablefabricators="fabricator" requiredtime="10">
 		<RequiredSkill identifier="weapons" level="60" />
@@ -306,14 +336,17 @@
 <!-- ODST Helmet -->
 <Item name="Insurrectionist ODST Helmet" identifier="nh_odst_helmet_ini" category="Diving,Equipment" tags="smallitem,deepdiving,divinggear_wearableindoors,divingmask,nh_needs_battery" fireproof="true" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_soft">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
-	<Price baseprice="800" sold="false" CanBeSpecial="false">
-		<Price storeidentifier="merchantoutpost" multiplier="0.6" />
-		<Price storeidentifier="merchantcity" multiplier="0.7" />
-		<Price storeidentifier="merchantresearch" multiplier="0.8" />
-		<Price storeidentifier="merchantmilitary" sold="true" BuyingPriceMultiplier="2" minamount="0" maxamount="3">
+	<!-- 650 -->
+	<Price baseprice="325" sold="false" BuyingPriceMultiplier="2.0" >
+		<Price storeidentifier="merchantresearch" sold="true" MinAvailable="1" MaxAvailable="2" RequiredFaction="separatists">
+			<Reputation faction="separatists" min="80" />
+		</Price>
+		<Price storeidentifier="merchantmilitary" sold="true" MinAvailable="1" MaxAvailable="8" RequiredFaction="separatists" >
 			<Reputation faction="separatists" min="75" />
 		</Price>
-		<Price storeidentifier="merchantmine" multiplier="0.6" />
+		<Price storeidentifier="merchantarmory" sold="true" MinAvailable="1" MaxAvailable="8" RequiredFaction="separatists" >
+			<Reputation faction="separatists" min="75" />
+		</Price>
 	</Price>
 	<Fabricate suitablefabricators="fabricator" requiredtime="5">
 		<RequiredSkill identifier="weapons" level="60" />
@@ -342,7 +375,7 @@
 				</StatusEffect>
 			</LightComponent>
 		</sprite>
-		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="true" LowPassMultiplier="0.3" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" />
+		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" ObstructVision="true" setvalue="true" tags="pressure_helmet" interval="1.0" duration="1.1" /> <!-- LowPassMultiplier="0.3" -->
 		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
