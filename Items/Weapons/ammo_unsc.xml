@@ -166,10 +166,10 @@
 	<CustomInterface canbeselected="true" drawhudwhenequipped="true">
 		<GuiFrame relativesize="0.15,0.3" anchor="TopLeft" absoluteoffset="0,-10" style="ItemUI" />
 		<TickBox text="Arm Computer">
-			<StatusEffect Type="OnUse" targettype="this" tags="armed_1" duration="0.6" interval="0.5" disabledeltatime="true" />
+			<StatusEffect Type="OnUse" targettype="this" tags="armed_1" duration="0.15" interval="0.1" disabledeltatime="true" />
 		</TickBox>
 		<TickBox text="Arm Warhead">
-			<StatusEffect Type="OnUse" targettype="this" tags="armed_2" duration="0.6" interval="0.5" disabledeltatime="true" />
+			<StatusEffect Type="OnUse" targettype="this" tags="armed_2" duration="0.15" interval="0.1" disabledeltatime="true" />
 		</TickBox>
 		<Button text="ACTIVATE">
 			<StatusEffect Type="OnUse" targettype="this" IsOn="true" tags="acivated" duration="999" disabledeltatime="True" OneShot="true" comparison="and">
@@ -234,6 +234,8 @@
 				<Conditional IsOn="false" targetitemcomponent="LightComponent" />
 			</StatusEffect>
 		</Button>
+		<!-- Would be nice if this worked, but it has a bug where changing the numbers sometimes sets it to 0 for a fraction of a second. Thus causing the nuke to explode.
+		<IntegerInput text="Timer" propertyname="Condition" min="15" max="1800" step="60"/> -->
 	</CustomInterface>
 	<!-- Ammunition/Detonator functionality -->
 	<ItemComponent characterusable="false">

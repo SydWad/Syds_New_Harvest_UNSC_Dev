@@ -11,7 +11,7 @@
     <target tag="human" state="Protect" threshold="-1" priority="100" reactdistance="75" attackdistance="0" timer="0" />
   </ai>
   <StatusEffect Type="Always" Targettype="this">
-    <Sound file="%ModDir%/Characters/Hank2/Blow Me Away.ogg" volume="0.2" range="300" loop="true" dontmuffle="true" />
+    <Sound file="%ModDir%/Characters/Hank2/Blow Me Away.ogg" volume="0.75" range="450" loop="true" dontmuffle="true" />
   </StatusEffect>
   <StatusEffect Type="OnDeath" Targettype="this">
     <RemoveCharacter />
