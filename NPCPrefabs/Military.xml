@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<npcsets>
+
+<npcset identifier="nh_unsc_military">
+	<npc identifier="unsc_trooper" job="outpostsecurityofficer" tags="securitynpc" spawnpointtags="security" healthmultiplier="1.5" behavior="Patrol">
+		<!-- Basic trooper -->
+		<ItemSet commonness="0.65">
+			<Item identifier="idcard" equip="true" tags="id_outpostsecurity" />
+			<Item identifier="nh_marine_uniform_2" equip="true" />
+			<Item identifier="nh_marinearmor1" equip="true" />
+			<Item identifier="nh_balaclava" equip="true" />
+			<Item identifier="nh_marinehelmetcomms" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>
+			<Item identifier="nh_ma37">
+				<Item identifier="nh_7.62x51mm_60" />
+			</Item>
+			<Item identifier="nh_7.62x51mm_35" amount="3" />
+			<Item identifier="divingknife" />
+			<Item identifier="divingmask">
+				<Item identifier="oxygentank" />
+			</Item>
+			<Item identifier="antibleeding1" amount="6" />
+			<!--<Item identifier="headset" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>-->
+			<Item identifier="nh_npc_immunity" />
+		</ItemSet>
+		<!-- Heavy Trooper -->
+		<ItemSet commonness="0.2">
+			<Item identifier="idcard" equip="true" tags="id_outpostsecurity" />
+			<Item identifier="nh_marine_uniform_2" equip="true" />
+			<Item identifier="nh_marinearmor2" equip="true" />
+			<Item identifier="nh_marinehelmetdiver_npc" equip="true">
+				<Item identifier="oxygentank" />
+			</Item>
+			<Item identifier="nh_radio_pack" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>
+			<Item identifier="nh_ma5b">
+				<Item identifier="nh_7.62x51mm_120" />
+			</Item>
+			<Item identifier="nh_7.62x51mm_60" amount="2" />
+			<Item identifier="divingknife" />
+			<Item identifier="antibleeding1" amount="6" />
+			<Item identifier="oxygentank" />
+			<!--<Item identifier="headset" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>-->
+			<Item identifier="nh_npc_immunity" />
+		</ItemSet>
+		<!-- Officer -->
+		<ItemSet commonness="0.15">
+			<Item identifier="idcard" equip="true" tags="id_outpostsecurity" />
+			<Item identifier="nh_marine_uniform_2" equip="true" />
+			<Item identifier="nh_marinearmor1" equip="true" />
+			<Item identifier="nh_captain_cap" equip="true"/>
+			<Item identifier="nh_sunglasses" equip="true" />
+			<Item identifier="nh_radio_pack" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>
+			<Item identifier="nh_br55">
+				<Item identifier="nh_9.5x40mag_30" />
+			</Item>
+			<Item identifier="nh_9.5x40mag_30" amount="2" />
+			<Item identifier="nh_9.5x40mag_30"/>
+			<Item identifier="divingknife" />
+			<Item identifier="divingmask">
+				<Item identifier="oxygentank" />
+			</Item>
+			<Item identifier="antibleeding1" amount="6" />
+			<!--<Item identifier="headset" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>-->
+			<Item identifier="nh_npc_immunity" />
+		</ItemSet>
+	</npc>
+</npcset>
+
+<npcset identifier="nh_ini_military">
+	<npc identifier="ini_trooper" job="outpostsecurityofficer" tags="securitynpc" spawnpointtags="security" healthmultiplier="1.5" behavior="Patrol">
+		<!-- Basic Trooper -->
+		<ItemSet commonness="0.65" >
+			<Item identifier="idcard" equip="true" tags="id_outpostsecurity" />
+			<Item identifier="nh_ini_uniform_2" equip="true" />
+			<Item identifier="nh_ini_armor_1" equip="true" />
+			<Item identifier="nh_ini_helmet_troop" equip="true" />
+			<Item identifier="nh_balaclava" equip="true" />
+			<Item identifier="nh_ma3">
+				<Item identifier="nh_7.62x51mm_60" />
+			</Item>
+			<Item identifier="nh_7.62x51mm_35" amount="3" />
+			<Item identifier="divingknife" />
+			<Item identifier="divingmask">
+				<Item identifier="oxygentank" />
+			</Item>
+			<!--<Item identifier="headset" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>-->
+			<Item identifier="nh_npc_immunity" />
+		</ItemSet>
+		<!-- Heavy Trooper -->
+		<ItemSet commonness="0.2" >
+			<Item identifier="idcard" equip="true" tags="id_outpostsecurity" />
+			<Item identifier="nh_ini_uniform_2" equip="true" />
+			<Item identifier="nh_ini_armor_2" equip="true" />
+			<Item identifier="nh_ini_helmet_diver_npc" equip="true" >
+				<Item identifier="oxygentank" />
+			</Item>
+			<Item identifier="nh_radio_pack" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>
+			<Item identifier="nh_m90">
+				<Item identifier="nh_8g_pvp" amount="3" />
+				<Item identifier="nh_8g_buckshot" amount="9" />
+				<Item identifier="flashlight">
+					<Item identifier="batterycelldisposable" />
+				</Item>
+			</Item>
+			<Item identifier="divingknife" />
+			<Item identifier="oxygentank" />
+			<!--<Item identifier="headset" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>-->
+			<Item identifier="nh_npc_immunity" />
+		</ItemSet>
+		<!-- Officer -->
+		<ItemSet commonness="0.15" >
+			<Item identifier="idcard" equip="true" tags="id_outpostsecurity" />
+			<Item identifier="nh_ini_uniform_2" equip="true" />
+			<Item identifier="nh_ini_armor_1" equip="true" />
+			<Item identifier="nh_ini_beret" equip="true" />
+			<Item identifier="nh_m6d" equip="true" >
+				<Item identifier="nh_12.7x58mag_12" />
+			</Item>
+			<Item identifier="nh_m41_ini_frag" />
+			<Item identifier="divingknife" />
+			<Item identifier="divingmask">
+				<Item identifier="oxygentank" />
+			</Item>
+			<Item identifier="headset" equip="true">
+				<Item identifier="batterycelldisposable" />
+			</Item>
+			<Item identifier="nh_npc_immunity" />
+		</ItemSet>
+	</npc>
+</npcset>
+
+</npcsets>

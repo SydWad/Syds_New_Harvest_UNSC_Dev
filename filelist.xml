@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" modversion="1.0.4" corepackage="False" steamworkshopid="3096140652" gameversion="1.7.7.0">
+<contentpackage name="Syd's New Harvest (UNSC) TEST BUILD" modversion="1.0.6" corepackage="False" steamworkshopid="3096140652" gameversion="1.7.7.0">
   <ItemAssembly file="%ModDir%/NH_Dev_Items.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions.xml" />
   <Afflictions file="%ModDir%/Afflictions/Afflictions_Wearable.xml" />
@@ -45,4 +45,6 @@
   <UIStyle file="%ModDir%/UI/style.xml" />
   <UIStyle file="%ModDir%/UI/Server/PlayStyles.xml" />
   <NPCSets file="%ModDir%/NPCPrefabs/OutpostNpcs.xml" />
+  <NPCSets file="%ModDir%/NPCPrefabs/Military.xml" />
+  <RandomEvents file="%ModDir%/Events/OutpostEvents.xml" />
 </contentpackage>

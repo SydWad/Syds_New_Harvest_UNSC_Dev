@@ -60,7 +60,7 @@
 	<LightComponent vulnerabletoemp="false" canbeselected="false" LightColor="255,50,50,150" range="18" castshadows="false" pulseamount="0.0" flicker="0.1" allowingameediting="false" ison="false">
 		<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
 		<!-- make the item "dangerous" so NPCs are likley to run away from it -->
-		<StatusEffect type="OnActive" OneShot="True" TargetType="This" IsDangerous="true" setvalue="True" />
+		<StatusEffect type="OnActive" OneShot="True" TargetType="This" IsDangerous="true" DontCleanUp="true" setvalue="True" />
 		<!-- Lock and hide the custom interface so people cant add or remove condition -->
 		<StatusEffect type="OnActive" OneShot="True" TargetType="This" targetitemcomponent="CustomInterface" canbeselected="false" drawhudwhenequipped="false" setvalue="True" />
 		<!-- When on, start lowering condition till it breaks -->

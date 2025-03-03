@@ -84,8 +84,8 @@
 		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.8" armorsector="0.0,0.0" />
 		<sprite name="Heavy Marine Armor Torso" texture="heavy_armor_torso.png" sourcerect="22,31,99,175" origin="0.53,0.58" scale="0.67" limb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Left Arm Back" texture="heavy_armor_torso.png" sourcerect="134,128,48,26" origin="0.5,0.6" scale="0.7" limb="LeftArm" depthlimb="LeftArm" depth="0.999" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
-		<sprite name="Heavy Marine Armor Left Arm Front" texture="heavy_armor_torso.png" sourcerect="134,158,51,70" origin="0.5,0.8" scale="0.7" limb="LeftArm" depthlimb="LeftForearm" depth="0.001" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
-		<sprite name="Heavy Marine Armor Right Arm" texture="heavy_armor_torso.png" sourcerect="134,4,51,70" origin="0.5,0.8" scale="0.7" limb="RightArm" depth="0.001" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Arm Front" texture="heavy_armor_torso.png" sourcerect="134,158,51,70" origin="0.5,0.8" scale="0.7" limb="LeftArm" depthlimb="LeftArm" depth="0.001" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Arm" texture="heavy_armor_torso.png" sourcerect="134,4,51,70" origin="0.5,0.8" scale="0.7" limb="RightArm" depth="0.999" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Right Lower Arm" texture="heavy_armor_torso.png" rotation="-5" sourcerect="195,8,48,89" origin="0.55,0.6" scale="0.6" limb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Left Lower Arm" texture="heavy_armor_torso.png" sourcerect="195,162,48,63" origin="0.53,0.45" scale="0.6" limb="LeftForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Right Hand" texture="heavy_armor_torso.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.5" limb="RightHand" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
@@ -93,10 +93,10 @@
 		<sprite name="Heavy Marine Armor Waist" texture="heavy_armor_legs.png" sourcerect="0,0,1,1" origin="0.5,0.5" scale="0.64" limb="Waist" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Right Thigh" texture="heavy_armor_legs.png" limb="RightThigh" sourcerect="102,1,70,140" origin="0.47,0.5" scale="0.7" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Left Thigh" texture="heavy_armor_legs.png" limb="LeftThigh" sourcerect="193,81,56,61" origin="0.5,0.0" scale="0.8" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
-		<sprite name="Heavy Marine Armor Right Leg" texture="heavy_armor_legs.png" limb="RightLeg" rotation="3" sourcerect="117,170,47,86" origin="0.4,0.55" scale="0.85" inheritlimbdepth="False" depth="0.001" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Leg" texture="heavy_armor_legs.png" limb="RightLeg" rotation="3" sourcerect="117,170,47,86" origin="0.4,0.55" scale="0.85" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<sprite name="Heavy Marine Armor Left Leg" texture="heavy_armor_legs.png" limb="LeftLeg" rotation="3" sourcerect="194,170,48,86" origin="0.4,0.55" scale="0.85" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
-		<sprite name="Heavy Marine Armor Right Shoe" texture="heavy_armor_legs.png" limb="RightFoot" rotation="100" sourcerect="39,97,56,51" origin="0.1,0.45" scale="0.64" inheritlimbdepth="False" depth="0.002" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
-		<sprite name="Heavy Marine Armor Left Shoe" texture="heavy_armor_legs.png" limb="LeftFoot" rotation="100" sourcerect="39,97,56,51" origin="0.1,0.45" scale="0.64" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Right Shoe" texture="heavy_armor_legs.png" limb="RightFoot" rotation="100" sourcerect="39,97,56,51" origin="0.1,0.45" scale="0.64" depthlimb="RightThigh" depth="0.999" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
+		<sprite name="Heavy Marine Armor Left Shoe" texture="heavy_armor_legs.png" limb="LeftFoot" rotation="100" sourcerect="39,97,56,51" origin="0.1,0.45" scale="0.64" depthlimb="LeftThigh" depth="0.999" hidelimb="false" hideotherwearables="false" inherittexturescale="true" />
 		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -134,7 +134,7 @@
 	<Sprite name="Marine Trooper Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,0,100,100" depth="0.6" origin="0.5,0.5" />
 	<Body radius="30" density="50" />
 	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
-		<sprite name="Marine Trooper Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="0,0,100,100" origin="0.5,0.5" />
+		<sprite name="Marine Trooper Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head"  inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="0,0,100,100" origin="0.5,0.5" />
 		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -179,7 +179,7 @@
 		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
-		<sprite name="Marine Comms Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="100,0,100,100" origin="0.5,0.5" />
+		<sprite name="Marine Comms Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head"  inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="100,0,100,100" origin="0.5,0.5" />
 		<!--<StatValue stattype="WalkingSpeed" value="-0.05" />
 		<StatValue stattype="SwimmingSpeed" value="-0.05" />-->
 	</Wearable>
@@ -223,7 +223,7 @@
 		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.0" />
-		<sprite name="Marine Medic Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="200,0,100,100" origin="0.5,0.5">
+		<sprite name="Marine Medic Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head"  inherittexturescale="true" hidewearablesoftype="hair" scale="1.3" sourcerect="200,0,100,100" origin="0.5,0.5">
 			<LightComponent range="30" lightcolor="125,255,150,40" powerconsumption="1" IsOn="true" castshadows="false">
 				<LightTexture texture="Content/Lights/lightcone_old.png" origin="0.03,0.5" size="0.1,0.1" />
 			</LightComponent>
@@ -250,7 +250,8 @@
 </Item>
 
 <!-- Marine Diving Helmet -->
-<Item name="" identifier="nh_marinehelmetdiver" category="Equipment" tags="smallitem,diving,lightdiving,divinggear_wearableindoors,divingmask" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.38">
+<!-- Remember to re-add divinggear_wearableindoors once the devs fix it -->
+<Item name="" identifier="nh_marinehelmetdiver" category="Diving,Equipment" tags="smallitem,lightdiving,divingmask" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.38">
 	<PreferredContainer secondary="nh_dev_armor" amount="1" spawnprobability="1" NotCampaign="true" />
 	<!-- 275 -->
 	<Price baseprice="137" BuyingPriceMultiplier="2.0" MinAvailable="0" MaxAvailable="3" >
@@ -277,7 +278,7 @@
 	<Sprite name="Marine Space Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="0,100,100,100" depth="0.6" origin="0.5,0.5" />
 	<Body radius="30" density="50" />
 	<Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
-		<sprite name="Marine Space Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="Hair,Beard" scale="1.35" sourcerect="0,100,100,100" origin="0.5,0.48" />
+		<sprite name="Marine Space Helmet" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" limb="Head"  inherittexturescale="true" hidewearablesoftype="Hair,Beard" scale="1.35" sourcerect="0,100,100,100" origin="0.5,0.48" />
 		<!-- Fake modifier to show speed change -->
 		<damagemodifier afflictionidentifiers="nh_fake_speed" damagemultiplier="0.95" armorsector="0.0,0.0" />
 		<damagemodifier afflictionidentifiers="nh_fake_fov" damagemultiplier="0.5" armorsector="0.0,0.0" />
@@ -403,15 +404,13 @@
 	<Body width="62" height="15" density="2" />
 	<Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
 		<!-- 0.10204 -->
-		<sprite name="Balaclava" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,128,128" origin="0.5,0.5" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Hair" depth="0.999" />
-		<sprite name="Hide Beard" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Head" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Beard" depth="0.999" />
-		<sprite name="Balaclava Neck" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="43,129,33,39" origin="0.67,2.18" limb="Torso" depth="0.1" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" />
+		<sprite name="Balaclava" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,128,128" origin="0.5,0.5" limb="Head"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Hair,Beard" depth="0.999" />
+		<sprite name="Balaclava Neck" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="43,129,33,39" origin="0.67,2.18" limb="Torso" depth="0.1"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" />
 		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" setvalue="true" />
 	</Wearable>
 	<Wearable slots="Any,Head">
-		<sprite name="Balaclava" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,128,128" origin="0.5,0.5" limb="Head" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Hair" depth="0.999" />
-		<sprite name="Hide Beard" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,1,1" origin="0.5,0.5" limb="Head" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Beard" depth="0.999" />
-		<sprite name="Balaclava Neck" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="43,129,33,39" origin="0.67,2.18" limb="Torso" depth="0.1" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" />
+		<sprite name="Balaclava" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="0,0,128,128" origin="0.5,0.5" limb="Head"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" hidewearablesoftype="Hair,Beard" depth="0.999" />
+		<sprite name="Balaclava Neck" texture="%ModDir%/Items/Jobgear/Security/balaclava_[GENDER].png" sourcerect="43,129,33,39" origin="0.67,2.18" limb="Torso" depth="0.1"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" />
 		<StatusEffect type="OnWearing" targettype="Character" HideFace="true" setvalue="true" />
 	</Wearable>
 </Item>
@@ -435,14 +434,14 @@
 		<Item identifier="plastic" OutConditionMin="0.5" OutConditionMax="0.5" />
 	</Deconstruct>
 	<Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
-		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
 	</Wearable>
 	<Wearable slots="Any,Head">
-		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
 	</Wearable>
 </Item>
 
-<!-- Tactical Sunglasses (Black) -->
+<!-- Tactical Sunglasses (Black), had to make a custom one or else it wouldnt equip in the right slot on Insurrectionists -->
 <Item name="" identifier="nh_sunglasses_2" variantof="nh_sunglasses" descriptionidentifier="nh_sunglasses" scale="0.12" SpriteColor="0,0,0,255" category="Equipment" tags="smallitem,clothing" maxstacksize="8" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light"></Item>
 
 <!-- Tactical Sunglasses (White) -->
@@ -467,10 +466,10 @@
 		<Item identifier="plastic" OutConditionMin="0.5" OutConditionMax="0.5" />
 	</Deconstruct>
 	<Wearable slots="Any,Head" msg="ItemMsgPickUpSelect">
-		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
 	</Wearable>
 	<Wearable slots="Any,Headset">
-		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35" inheritlimbdepth="true" inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
+		<sprite name="NH Sunglasses" texture="%ModDir%/Items/Jobgear/Security/tactical_sunglasses.png" sourcerect="0,0,199,63" origin="0.42,0.7" limb="Head" scale="0.35"  inherittexturescale="true" hidelimb="false" hideotherwearables="false" canbehiddenbyotherwearables="false" depth="0.999" />
 	</Wearable>
 </Item>
 
@@ -539,7 +538,7 @@
 		<sprite name="ODST Armor Left Leg" texture="odst_armor_legs.png" sourcerect="189,146,60,106" origin="0.45,0.5" scale="0.8" limb="LeftLeg" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
 		<sprite name="ODST Armor Right Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
 		<sprite name="ODST Armor Left Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="Torso" depth="0.999" hidelimb="true" inherittexturescale="true"  canbehiddenbyotherwearables="false" />
 		<!-- Needs a pressurised helmet on in order to get pressure protection -->
 		<StatusEffect type="OnWearing" targettype="Character" PressureProtection="4000.0" setvalue="true" disabledeltatime="true">
 			<Conditional HasStatusTag="pressure_helmet" />
@@ -604,7 +603,7 @@
 		<sprite name="ODST Armor Left Thigh" texture="odst_armor_legs.png" sourcerect="178,2,76,143" origin="0.5,0.5" scale="0.7" limb="LeftThigh" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
 		<sprite name="ODST Armor Right Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="RightFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
 		<sprite name="ODST Armor Left Shoe" texture="odst_armor_legs.png" sourcerect="13,94,37,83" origin="0.55,0.5" scale="0.75" rotation="90" limb="LeftFoot" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="Torso" depth="0.999" hidelimb="true" inherittexturescale="true"  canbehiddenbyotherwearables="false" />
 		<sprite name="ODST Torso Plating" texture="odst_armor_heavy.png" sourcerect="182,18,45,154" origin="-0.5,0.6" scale="0.65" limb="Torso" depthlimb="Torso" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
 		<sprite name="ODST Right Arm Plating" texture="odst_armor_heavy.png" sourcerect="4,7,67,100" origin="0.55,0.8" scale="0.65" limb="RightArm" depthlimb="RightForearm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
 		<sprite name="ODST Left Arm Plating" texture="odst_armor_heavy.png" sourcerect="95,7,67,100" origin="0.55,0.8" scale="0.65" limb="LeftArm" hidelimb="false" hideotherwearables="false" inherittexturescale="true" canbehiddenbyotherwearables="false" />
@@ -791,36 +790,36 @@
 	<Wearable slots="OuterClothes" msg="itemmsgequipselect">
 		<!-- Fake modifier to show effects to player -->
 		<damagemodifier afflictionidentifiers="nh_fake_pressure" damagemultiplier="0" armorsector="0.0,0.0" />
-		<!--<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="217,34,122,161" origin="0.6,0.7" scale="0.7" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="237,245,83,86" origin="0.57,0.55" scale="0.65" limb="Waist" rotation="350" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="367,125,41,81" origin="0.75,0.5" scale="0.8" limb="RightForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="446,126,41,79" origin="0.75,0.5" scale="0.81" limb="LeftForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="364,14,52,98" origin="0.55,0.55" scale="0.75" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="448,15,52,98" origin="0.55,0.55" scale="0.75" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="368,210,31,38" origin="0.7,0.5" scale="0.83" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="450,209,32,38" origin="0.7,0.5" scale="0.83" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="11,11,71,145" origin="0.5,0.5" scale="0.7" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="117,15,71,145" origin="0.5,0.5" scale="0.7" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="16,175,76,138" origin="0.45,0.6" scale="0.7" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="117,177,76,138" origin="0.45,0.6" scale="0.7" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,270,83,60" origin="0.5,0.55" scale="0.7" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="430,270,83,60" origin="0.5,0.55" scale="0.7" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />-->
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="156,14,108,141" origin="0.56,0.7" scale="0.8" limb="Torso" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="175,199,81,57" origin="0.52,0.55" scale="0.78" limb="Waist" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="282,101,36,61" origin="0.55,0.5" scale="1.04" limb="RightForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,101,36,61" origin="0.55,0.5" scale="1.04" limb="LeftForearm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="285,5,44,86" origin="0.5,0.55" scale="0.97" limb="RightArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,5,44,86" origin="0.5,0.55" scale="0.97" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="287,162,28,40" origin="0.55,0.5" scale="1.07" limb="RightHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="351,162,28,40" origin="0.55,0.5" scale="1.07" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="12,7,61,112" origin="0.5,0.52" scale="0.9" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="89,7,61,112" origin="0.5,0.52" scale="0.9" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="11,136,59,103" origin="0.45,0.6" scale="0.9" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="90,136,59,103" origin="0.45,0.6" scale="0.9" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="277,218,59,36" origin="0.5,0.55" scale="1.0" limb="RightFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="337,218,59,36" origin="0.5,0.55" scale="1.0" limb="LeftFoot" sound="footstep_armor_heavy" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
-		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="Torso" depth="0.999" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" canbehiddenbyotherwearables="false" />
+		<!--<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="217,34,122,161" origin="0.6,0.7" scale="0.7" limb="Torso"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="237,245,83,86" origin="0.57,0.55" scale="0.65" limb="Waist" rotation="350"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="367,125,41,81" origin="0.75,0.5" scale="0.8" limb="RightForearm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="446,126,41,79" origin="0.75,0.5" scale="0.81" limb="LeftForearm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="364,14,52,98" origin="0.55,0.55" scale="0.75" limb="RightArm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="448,15,52,98" origin="0.55,0.55" scale="0.75" limb="LeftArm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="368,210,31,38" origin="0.7,0.5" scale="0.83" limb="RightHand"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="450,209,32,38" origin="0.7,0.5" scale="0.83" limb="LeftHand"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="11,11,71,145" origin="0.5,0.5" scale="0.7" limb="RightThigh"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="117,15,71,145" origin="0.5,0.5" scale="0.7" limb="LeftThigh"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="16,175,76,138" origin="0.45,0.6" scale="0.7" limb="RightLeg"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="117,177,76,138" origin="0.45,0.6" scale="0.7" limb="LeftLeg"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,270,83,60" origin="0.5,0.55" scale="0.7" limb="RightFoot" sound="footstep_armor_heavy"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="430,270,83,60" origin="0.5,0.55" scale="0.7" limb="LeftFoot" sound="footstep_armor_heavy"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="leftarm" hidelimb="true" inherittexturescale="true"  canbehiddenbyotherwearables="false" />-->
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="156,14,108,141" origin="0.56,0.7" scale="0.8" limb="Torso"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="175,199,81,57" origin="0.52,0.55" scale="0.78" limb="Waist"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="282,101,36,61" origin="0.55,0.5" scale="1.04" limb="RightForearm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,101,36,61" origin="0.55,0.5" scale="1.04" limb="LeftForearm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="285,5,44,86" origin="0.5,0.55" scale="0.97" limb="RightArm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="347,5,44,86" origin="0.5,0.55" scale="0.97" limb="LeftArm"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="287,162,28,40" origin="0.55,0.5" scale="1.07" limb="RightHand"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="351,162,28,40" origin="0.55,0.5" scale="1.07" limb="LeftHand"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="12,7,61,112" origin="0.5,0.52" scale="0.9" limb="RightThigh"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="89,7,61,112" origin="0.5,0.52" scale="0.9" limb="LeftThigh"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="11,136,59,103" origin="0.45,0.6" scale="0.9" limb="RightLeg"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="90,136,59,103" origin="0.45,0.6" scale="0.9" limb="LeftLeg"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="277,218,59,36" origin="0.5,0.55" scale="1.0" limb="RightFoot" sound="footstep_armor_heavy"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite texture="%ModDir%/Items/Jobgear/Armor/spartan_mk5_worn.png" sourcerect="337,218,59,36" origin="0.5,0.55" scale="1.0" limb="LeftFoot" sound="footstep_armor_heavy"  hidelimb="true" hideotherwearables="true" inherittexturescale="true" />
+		<sprite name="Black Undersuit" texture="%ModDir%/Items/Jobgear/undersuit_[GENDER].png" sourcerect="160,0,112,192" Origin="0.5,0.5" limb="Torso" depthlimb="Torso" depth="0.999" hidelimb="true" inherittexturescale="true"  canbehiddenbyotherwearables="false" />
 		<damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
 		<damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />

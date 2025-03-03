@@ -1,101 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <prefabs>
-  <gruntblood startsizemin="0.5,0.5" startsizemax="1,1" startrotationmin="0" startrotationmax="360" startcolor="0,255,255,255" endcolor="0,255,255,255" lifetime="1" growtime="0.1" velocitychange="0,-0.1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,-0.1" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" sizechangemin="0,0" sizechangemax="0,0" drawtarget="Air" blendstate="AlphaBlend" animduration="1" loopanim="True">
-    <animatedsprite texture="Content/Particles/Spatter1.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.2,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter2.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.5,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter3.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.3,0.5" />
-  </gruntblood>
-  <jackalblood startsizemin="0.5,0.5" startsizemax="1,1" startrotationmin="0" startrotationmax="360" startcolor="55,0,85,255" endcolor="55,0,85,255" lifetime="1" growtime="0.1" velocitychange="0,-0.1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,-0.1" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" sizechangemin="0,0" sizechangemax="0,0" drawtarget="Air" blendstate="AlphaBlend" animduration="1" loopanim="True">
-    <animatedsprite texture="Content/Particles/Spatter1.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.2,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter2.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.5,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter3.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.3,0.5" />
-  </jackalblood>
-  <eliteblood startsizemin="0.5,0.5" startsizemax="1,1" startrotationmin="0" startrotationmax="360" startcolor="0,5,85,255" endcolor="0,5,85,255" lifetime="1" growtime="0.1" velocitychange="0,-0.1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,-0.1" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" sizechangemin="0,0" sizechangemax="0,0" drawtarget="Air" blendstate="AlphaBlend" animduration="1" loopanim="True">
-    <animatedsprite texture="Content/Particles/Spatter1.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.2,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter2.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.5,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter3.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.3,0.5" />
-  </eliteblood>
-  <bruteblood startsizemin="0.5,0.5" startsizemax="1,1" startrotationmin="0" startrotationmax="360" startcolor="85,0,40,255" endcolor="85,0,40,255" lifetime="1" growtime="0.1" velocitychange="0,-0.1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,-0.1" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" sizechangemin="0,0" sizechangemax="0,0" drawtarget="Air" blendstate="AlphaBlend" animduration="1" loopanim="True">
-    <animatedsprite texture="Content/Particles/Spatter1.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.2,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter2.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.5,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter3.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.3,0.5" />
-  </bruteblood>
-  <hunterblood startsizemin="0.5,0.5" startsizemax="1,1" startrotationmin="0" startrotationmax="360" startcolor="255,155,0,255" endcolor="255,155,0,255" lifetime="1" growtime="0.1" velocitychange="0,-0.1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,-0.1" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" sizechangemin="0,0" sizechangemax="0,0" drawtarget="Air" blendstate="AlphaBlend" animduration="1" loopanim="True">
-    <animatedsprite texture="Content/Particles/Spatter1.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.2,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter2.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.5,0.5" />
-    <animatedsprite texture="Content/Particles/Spatter3.png" sourcerect="0,0,1024,1024" columns="4" rows="8" origin="0.3,0.5" />
-  </hunterblood>
-  <!-- Plasma Grenade flame -->
-  <plasmagrenade startsizemin="0.05,0.05" startsizemax="0.1,0.1" sizechangemin="0.1,0.1" sizechangemax="0.2,0.2" startrotationmin="-180" startrotationmax="180" startcolor="100,255,255,255" endcolor="0,125,255,0" lifetime="2.5" growtime="0.05" drawtarget="Both" drawontop="True" usecollision="True" blendstate="Additive" velocitychange="0,1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,1" collisionradius="1" deleteoncollision="False" friction="0.5" restitution="0.5" animduration="1" loopanim="True">
-    <sprite texture="%ModDir%/Particles/PlasmaFx.png" sourcerect="0,0,128,128" />
-  </plasmagrenade>
-  <!-- Explosion from Plasma Grenade -->
-  <explosionplasma lifetime="1" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="360" rotatetodirection="False" drag="0" waterdrag="0" velocitychange="0,5" velocitychangewater="0,0" collisionradius="1" usecollision="True" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="1,0.5" startsizemax="1.5,0.75" sizechangemin="-1,-0.5" sizechangemax="-2,-1" growtime="0.2" startcolor="255,255,255,255" endcolor="255,150,0,255" drawtarget="Air" blendstate="Additive" animduration="1" loopanim="False" startdelaymin="0" startdelaymax="0">
-    <animatedsprite texture="%ModDir%/Particles/PlasmaRoundParticleSheet.png" sourcerect="0,0,2048,2048" columns="10" rows="5" origin="0.5,0.8" premultiplyalpha="false" />
-  </explosionplasma>
-  <!-- Plasma Pistol's Muzzle Flash -->
-  <plasmapistolmuzzleflash lifetime="0.15" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychange="0,0" velocitychangewater="0,0" collisionradius="0" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="0.8,0.8" startsizemax="1.0,1.0" growtime="0.02" startcolor="255,255,255,255" endcolor="255,255,255,0" drawtarget="Both" drawontop="True" blendstate="Additive" loopanim="False">
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="0,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="64,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="128,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="192,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="0,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="64,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="128,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="192,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-  </plasmapistolmuzzleflash>
-  <!-- Plasma Rifle's Muzzle Flash -->
-  <plasmariflemuzzleflash lifetime="0.25" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychange="0,0" velocitychangewater="0,0" collisionradius="0" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="0.8,0.8" startsizemax="1.0,1.0" growtime="0.02" startcolor="255,255,255,255" endcolor="255,255,255,0" drawtarget="Both" drawontop="True" blendstate="Additive" loopanim="False">
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="512,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="576,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="640,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="704,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="512,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="576,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="640,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="704,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-  </plasmariflemuzzleflash>
-  <!-- Needler's Muzzle Flash -->
-  <needlermuzzleflash lifetime="0.25" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychange="0,0" velocitychangewater="0,0" collisionradius="0" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="0.8,0.8" startsizemax="1.0,1.0" growtime="0.02" startcolor="255,255,255,255" endcolor="255,255,255,0" drawtarget="Both" drawontop="True" blendstate="Additive" loopanim="False">
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="256,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="320,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="384,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="448,0,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="256,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="320,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="384,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="448,64,64,64" origin="0.0,0.5" premultiplyalpha="false" />
-  </needlermuzzleflash>
-  <!-- Flash from Sentinel Beam's laser -->
-  <sentinelbeamflash startsizemin="1.5,0.9" startsizemax="2,1.1" sizechange="-4.0,-0.5" startcolor="255,255,255,255" endcolor="255,255,255,0" lifetime="0.25" drawtarget="Both" drawontop="True" blendstate="Additive" velocitychange="0,0" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,0" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" sizechangemin="-4,-0.5" sizechangemax="-4,-0.5" growtime="0" animduration="1" loopanim="True">
-    <sprite texture="%ModDir%/Characters/Sentinel/sentinel_weapons.png" sourcerect="0,84,256,44" origin="0.0,0.5" />
-  </sentinelbeamflash>
-  <!-- Beam from the Sentinel's weapon -->
-  <sentinelbeamlaser lifetime="0.15" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychange="0,0" velocitychangewater="0,0" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="0.8,0.8" startsizemax="1.0,1.0" startcolor="255,255,255,255" endcolor="255,255,255,0" drawtarget="Both" drawontop="True" blendstate="Additive" loopanim="False">
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="0,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="64,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="128,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="192,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="256,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="320,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="384,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="448,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="512,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="576,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="640,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="704,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="768,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="832,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="896,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-    <sprite texture="%ModDir%/Particles/MuzzleFlashParticleSheet.png" sourcerect="960,128,64,64" origin="0.5,0.5" premultiplyalpha="false" />
-  </sentinelbeamlaser>
-  <floodspores startsizemin="0.4,0.4" startsizemax="0.5,0.5" sizechangemin="0.25,0.25" sizechangemax="0.3,0.3" startrotationmin="0" startrotationmax="360" startcolor="80,80,80,255" endcolor="0,0,0,0" growtime="0.2" lifetime="5" usecollision="True" collisionradius="80" velocitychange="0,2.5" animduration="4" friction="0.01" restitution="0.01" loopanim="False" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" rotatetodirection="False" drag="0" waterdrag="0" velocitychangewater="0,2.5" deleteoncollision="False" drawtarget="Air" blendstate="AlphaBlend">
-    <animatedsprite texture="%ModDir%/Particles/SporeParticleSheet.png" sourcerect="0,0,1024,1024" columns="5" rows="5" />
-  </floodspores>
-  <jackalshield lifetime="0" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="0" startrotationmax="0" rotatetodirection="True" drag="0" waterdrag="0" velocitychange="0,0" velocitychangewater="0,0" collisionradius="0" usecollision="True" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="1.0,1.0" startsizemax="1.0,1.0" growtime="0" startcolor="255,255,255,255" endcolor="255,255,255,255" drawtarget="Both" drawontop="True" blendstate="Additive" loopanim="True" animduration="1">
-    <animatedsprite texture="%ModDir%/Characters/Jackal/jackalshield.png" sourcerect="0,0,768,384" columns="6" rows="3" origin="0.5,0.5" depth="0.55" />
-  </jackalshield>
-  <underwatermuzzleflashfast lifetime="1" startdelaymin="0" startdelaymax="0" angularvelocitymin="0" angularvelocitymax="0" startrotationmin="270" startrotationmax="270" rotatetodirection="false" drag="0" waterdrag="0" velocitychange="0,0" velocitychangewater="0,0" collisionradius="1" usecollision="False" deleteoncollision="False" friction="0.5" restitution="0.5" startsizemin="1,1" startsizemax="1.5,1.5" sizechangemin="0.1,0.1" sizechangemax="0.5,0.5" growtime="0.2" startcolor="255,150,100,255" middlecolor="225,215,255,255" endcolor="225,255,225,0" drawtarget="Water" blendstate="AlphaBlend" animduration="1" loopanim="False" drawontop="False" lifetimemin="0" usemiddlecolor="True" priority="1">
-    <animatedsprite texture="%ModDir%/Particles/UnderwaterExplosionSheet.png" sourcerect="0,0,2040,2040" columns="10" rows="10" origin="0.5,0.5" premultiplyalpha="false" />
+  <underwatermuzzleflashfast 
+  lifetime="1" 
+  startdelaymin="0" 
+  startdelaymax="0" 
+  angularvelocitymin="0" 
+  angularvelocitymax="0" 
+  startrotationmin="270" 
+  startrotationmax="270" 
+  rotatetodirection="false" 
+  drag="0" 
+  waterdrag="0" 
+  velocitychange="0,0" 
+  velocitychangewater="0,0" 
+  collisionradius="1" 
+  usecollision="False" 
+  deleteoncollision="False" 
+  friction="0.5" 
+  restitution="0.5" 
+  startsizemin="1,1" 
+  startsizemax="1.5,1.5" 
+  sizechangemin="0.1,0.1" 
+  sizechangemax="0.5,0.5" 
+  growtime="0.2" 
+  startcolor="255,150,100,255" 
+  middlecolor="225,215,255,255"
+  endcolor="225,255,225,0"
+  drawtarget="Water"
+  blendstate="AlphaBlend"
+  animduration="1"
+  loopanim="False"
+  drawontop="False"
+  lifetimemin="0"
+  usemiddlecolor="True"
+  priority="1">
+    <animatedsprite 
+	texture="%ModDir%/Particles/UnderwaterExplosionSheet.png" 
+	sourcerect="0,0,2040,2040"
+	columns="10" 
+	rows="10" 
+	origin="0.5,0.5" 
+	premultiplyalpha="false" />
   </underwatermuzzleflashfast>
+  <instantsmoke
+    startsizemin="0.3,0.3"
+    startsizemax="0.4,0.4"
+    sizechangemin="0.1,0.1"
+    sizechangemax="0.2,0.2"
+    startrotationmin="0"
+    startrotationmax="360"
+    startcolor="255,255,255,255"
+    endcolor="0,0,0,0"
+    growtime="0.2"
+    lifetime="2"
+    usecollision="False"
+    collisionradius="50"
+    velocitychange="0,1.5"
+    animduration="2"
+    friction="0.01"
+    restitution="0.01"
+    loopanim="False"
+    startdelaymin="0"
+    startdelaymax="0"
+    angularvelocitymin="0"
+    angularvelocitymax="0"
+    rotatetodirection="False"
+    drag="0"
+    waterdrag="0"
+    velocitychangewater="0,0.5"
+    deleteoncollision="False"
+    drawtarget="Air"
+    blendstate="AlphaBlend"
+    drawontop="False"
+    lifetimemin="0"
+    middlecolor="255,255,255,255"
+    usemiddlecolor="False"
+    priority="0">
+    <animatedsprite
+      texture="Content/Particles/SmokeParticleSheet.png"
+      sourcerect="0,205,1024,819"
+      columns="5"
+      rows="4" />
+  </instantsmoke>
 </prefabs>

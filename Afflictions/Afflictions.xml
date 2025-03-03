@@ -2,6 +2,31 @@
 <Afflictions>
 
 <Affliction
+	name="NPC Poison Immunity"
+	identifier="nh_poison_immunity"
+	description=""
+	type="buff"
+    isbuff="true"
+	limbspecific="false"
+	indicatorlimb="Torso"
+	showiconthreshold="0.1" 
+	showicontoothersthreshold="1000"
+	showinhealthscannerthreshold="1000"
+	maxstrength="10"
+	multiplybymaxvitality="false"
+	iconcolors="0,200,255,255">
+	<Effect minstrength="0" 
+	maxstrength="10"
+	strengthchange="1"
+	multiplybymaxvitality="false"
+	resistancefor="spaceherpes,poison,paralysis"
+	minresistance="1.0"
+	maxresistance="1.0">
+	</Effect>
+	<icon texture="Content/UI/CommandUIAtlas.png" sourcerect="768,768,128,128" origin="0,0" />
+</Affliction>
+
+<Affliction
 	name="Cremation"
 	identifier="nh_cremation"
 	description="Measures how long till the bodie is destroyed by fire.."

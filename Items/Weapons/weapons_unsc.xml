@@ -56,6 +56,7 @@
 			<Conditional Condition="gt 1" />
 		</StatusEffect>
 		<!-- Manage spinning barrel P.1 -->
+		<!-- Also adds the bubbles based on how fast the barrel is spinning. -->
 		<StatusEffect type="OnActive" targettype="Contained" targets="nh_aie_486h_barrel" condition="-100" comparison="and">
 			<Conditional Condition="gt 1" targetcontainer="true" />
 		</StatusEffect>
@@ -68,24 +69,31 @@
 		</StatusEffect>
 		<StatusEffect type="OnActive" targettype="Contained" targets="nh_aie_486h_barrel" condition="-100" comparison="and">
 			<Conditional Condition="gteq 60" targetcontainer="true" />
+			<ParticleEmitter particle="FlareBubbles" particlespersecond="4" distance="30" velocity="15" scalemultiplier="0.3,0.3" CopyEntityAngle="True" />
 		</StatusEffect>
 		<StatusEffect type="OnActive" targettype="Contained" targets="nh_aie_486h_barrel" condition="-100" comparison="and">
 			<Conditional Condition="gteq 80" targetcontainer="true" />
+			<ParticleEmitter particle="FlareBubbles" particlespersecond="4" distance="30" velocity="15" scalemultiplier="0.5,0.5" CopyEntityAngle="True" />
 		</StatusEffect>
 		<StatusEffect type="OnActive" targettype="Contained" targets="nh_aie_486h_barrel" condition="-300" comparison="and">
 			<Conditional Condition="gteq 98" targetcontainer="true" />
+			<ParticleEmitter particle="FlareBubbles" particlespersecond="3" distance="30" velocity="15" scalemultiplier="0.5,0.5" CopyEntityAngle="True" />
+			<ParticleEmitter particle="FlareBubbles" particlespersecond="4" distance="-20" velocity="45" scalemultiplier="0.5,0.5" CopyEntityAngle="True" />
 		</StatusEffect>
 	</Holdable>
 	<RangedWeapon reload="0.8" barrelpos="250,10" unskilledspread="30" spread="1" combatPriority="91" drawhudwhenequipped="true" crosshairscale="0.15" holdtrigger="true">
 		<Crosshair texture="%ModDir%/Items/Weapons/crosshairs_2.png" sourcerect="768,768,256,256" />
 		<CrosshairPointer texture="%ModDir%/Items/Weapons/crosshairs_2.png" sourcerect="0,768,256,256" />
-		<ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1.7,1.5" />
-		<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="45" anglemin="0" anglemax="0" colormultiplier="255,255,255,255" scalemultiplier="0.2,0.8" />
 		<StatusEffect type="OnUse" targettype="Contained" Targets="7.62x51ammo_m" >
 			<Conditional HasStatusTag="! nh_fired_recently" />
 			<Spawnitem identifier="nh_casing_med" amount="1" spawnposition="This" />
 		</StatusEffect>
-		<StatusEffect type="OnUse" targettype="This,Contained" forceplaysounds="true" duration="0.06" disabledeltatime="true" tags="nh_fired_recently">
+		<StatusEffect type="OnUse" targettype="This" duration="0.06" disabledeltatime="true" comparison="and">
+			<Conditional HasStatusTag="! nh_fired_recently" />
+			<Conditional InWater="True" />
+			<ParticleEmitter particle="underwatermuzzleflashfast" particleamount="1" distance="125" scalemultiplier="0.2,0.8" CopyEntityAngle="True" />
+		</StatusEffect>
+		<StatusEffect type="OnUse" targettype="This" forceplaysounds="true" duration="0.06" disabledeltatime="true" tags="nh_fired_recently">
 			<Conditional HasStatusTag="! nh_fired_recently" />
 			<Sound file="%ModDir%/Items/Weapons/General Sounds/Chaingun_1.ogg" range="3000" volume="1" selectionmode="Random" />
 			<Sound file="%ModDir%/Items/Weapons/General Sounds/Chaingun_2.ogg" range="3000" volume="1" selectionmode="Random" />
@@ -95,6 +103,7 @@
 			<Sound file="%ModDir%/Items/Weapons/General Sounds/Chaingun_2.ogg" range="3000" volume="0.6" selectionmode="Random" />
 			<Sound file="%ModDir%/Items/Weapons/General Sounds/Chaingun_3.ogg" range="3000" volume="0.6" selectionmode="Random" />
 			<Explosion range="80.0" force="1.25" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="0.0" />
+			<ParticleEmitter particle="muzzleflash" particleamount="1" distance="70" scalemultiplier="1.7,1.5" CopyEntityAngle="True" />
 		</StatusEffect>
 		<StatusEffect type="OnUse" targettype="Contained">
 			<Use />
@@ -104,6 +113,7 @@
 		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1000" castshadows="true" setvalue="true" />
 		<StatusEffect type="OnUse" targettype="this" targetitemcomponent="LightComponent" range="1" castshadows="false" setvalue="true" delay="0.05" disabledeltatime="true" />
 	</RangedWeapon>
+	<!-- Secondary ranged weapon, mostly needed so the "OnSecondaryUse" can still run even if you are out of ammo. -->
 	<RangedWeapon suitableprojectiles="nh_aie_486h_barrel" combatPriority="-1" drawhudwhenequipped="false" holdtrigger="true">
 		<!-- Speed debuff -->
 		<StatusEffect type="OnSecondaryUse" targettype="Character" duration="0.1" stackable="false">
@@ -143,7 +153,7 @@
 			<Conditional Condition="gteq 80" />
 			<Conditional Condition="lt 98" />
 		</StatusEffect>
-		<StatusEffect type="OnSecondaryUse" targettype="This" reload="0.02" setvalue="true" comparison="and">
+		<StatusEffect type="OnSecondaryUse" targettype="This" reload="0.02" setvalue="true" >
 			<Conditional Condition="gteq 98" />
 		</StatusEffect>
 	</RangedWeapon>

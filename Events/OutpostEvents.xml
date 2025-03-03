@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Randomevents>
+
+<!-- On military stations replace all the civilians with military personelle. -->
+<EventSet identifier="military_events" LevelType="outpost" LocationType="military" AllowAtStart="true" ChooseRandom="false" IgnoreCooldown="true" Additive="true" SelectAlways="true">
+
+<ScriptedEvent identifier="coalition_military" faction="coalition">
+	<TagAction criteria="humanprefabidentifier:commoner" tag="commoner" />
+	<Label name="LoopStart" />
+	<WaitAction time="0.02" />
+	<CheckConditionalAction targettag="commoner" IsDead="false" >
+		<Success>
+			<!-- Select an existing commoner -->
+			<TagAction criteria="humanprefabidentifier:commoner" tag="commoner_to_remove" ChooseRandom="True" ChooseRandomExcludingTag="True" />
+
+			<!-- Immediately spawn the security NPC coalition on the commoner -->
+			<SpawnAction NPCSetIdentifier="nh_unsc_military" NPCIdentifier="unsc_trooper" targettag="securityofficer" spawnpointtag="commoner_to_remove" />
+			<!-- Sometimes spawn a second guard -->
+			<RNGAction chance="0.33">
+				<Success>
+					<SpawnAction NPCSetIdentifier="nh_unsc_military" NPCIdentifier="unsc_trooper" targettag="securityofficer" spawnpointtag="commoner_to_remove" />
+				</Success>
+				<Failure />
+			</RNGAction>
+
+			<!-- After a 0.5 second delay, remove the commoner -->
+			<StatusEffectAction targettag="commoner_to_remove">
+				<StatusEffect TargetType="This" delay="0.01" DisableDeltaTime="True" >
+					<RemoveCharacter />
+				</StatusEffect>
+			</StatusEffectAction>
+			
+			<Goto name="LoopStart" />
+		</Success>
+		<Failure>
+			<!-- Exit Loop -->
+		</Failure>
+	</CheckConditionalAction>
+</ScriptedEvent>
+
+<ScriptedEvent identifier="Insurrectionist_military" faction="separatists">
+	<TagAction criteria="humanprefabidentifier:commoner" tag="commoner" />
+	<Label name="LoopStart" />
+	<WaitAction time="0.02" />
+	<CheckConditionalAction targettag="commoner" IsDead="false" >
+		<Success>
+			<!-- Select an existing commoner -->
+			<TagAction criteria="humanprefabidentifier:commoner" tag="commoner_to_remove" ChooseRandom="True" ChooseRandomExcludingTag="True" />
+
+			<!-- Immediately spawn the security NPC coalition on the commoner -->
+			<SpawnAction NPCSetIdentifier="nh_ini_military" NPCIdentifier="ini_trooper" targettag="securityofficer" spawnpointtag="commoner_to_remove" />
+			<!-- Sometimes spawn a second guard -->
+			<RNGAction chance="0.33">
+				<Success>
+					<SpawnAction NPCSetIdentifier="nh_ini_military" NPCIdentifier="ini_trooper" targettag="securityofficer" spawnpointtag="commoner_to_remove" />
+				</Success>
+				<Failure />
+			</RNGAction>
+
+			<!-- After a 0.5 second delay, remove the commoner -->
+			<StatusEffectAction targettag="commoner_to_remove">
+				<StatusEffect TargetType="This" delay="0.01" DisableDeltaTime="True" >
+					<RemoveCharacter />
+				</StatusEffect>
+			</StatusEffectAction>
+			
+			<Goto name="LoopStart" />
+		</Success>
+		<Failure>
+			<!-- Exit Loop -->
+		</Failure>
+	</CheckConditionalAction>
+</ScriptedEvent>
+
+</EventSet>
+  
+</Randomevents>

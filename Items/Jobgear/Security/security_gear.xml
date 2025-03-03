@@ -55,7 +55,7 @@
 		<Item identifier="organicfiber" OutConditionMin="0.5" OutConditionMax="0.5" />
 	</Deconstruct>
 	<Wearable slots="Any,Head">
-		<sprite name="NH Boonie Hat" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,100,100,100" limb="Head" rotation="10" inheritlimbdepth="true" inherittexturescale="true" hidewearablesoftype="hair" scale="1.4" origin="0.52,0.5" />
+		<sprite name="NH Boonie Hat" texture="%ModDir%/Items/Jobgear/Armor/headgears.png" sourcerect="200,100,100,100" limb="Head" rotation="10"  inherittexturescale="true" hidewearablesoftype="hair" scale="1.4" origin="0.52,0.5" />
 		<damagemodifier afflictionidentifiers="concussion" damagemultiplier="0.5" armorsector="0.0,360.0" />
 		<SkillModifier skillidentifier="weapons" skillvalue="5" />
 	</Wearable>
